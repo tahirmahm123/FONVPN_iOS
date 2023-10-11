@@ -15,8 +15,8 @@ FOUNDATION_EXPORT const unsigned char CommUtilsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <CommUtils/PublicHeader.h>
 
-#import "AppProfile.h"
-#import "JSONUtils.h"
-#import "NSError+Helper.h"
-#import "Settings.h"
-#import "NSString+Localize.h"
+#import <CommUtils/AppProfile.h>
+#import <CommUtils/JSONUtils.h>
+#import <CommUtils/NSError+Helper.h>
+#import <CommUtils/Settings.h>
+#import <CommUtils/NSString+Localize.h>

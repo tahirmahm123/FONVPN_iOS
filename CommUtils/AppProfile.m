@@ -32,8 +32,8 @@
 }
 
 + (NSUserDefaults *)sharedUserDefaults {
-    NSString *groupID = [self sharedGroupIdentifier];
-    return [[NSUserDefaults alloc] initWithSuiteName:groupID];
+//    NSString *groupID = [self sharedGroupIdentifier];
+    return [[NSUserDefaults alloc] init];//WithSuiteName:groupID];
 }
 
 + (NSURL * _Nonnull)sharedGeneralConfUrl {

@@ -218,6 +218,7 @@
     NEPacketTunnelNetworkSettings *settings = [[NEPacketTunnelNetworkSettings alloc] initWithTunnelRemoteAddress:@"192.0.2.2"];
     settings.IPv4Settings = ipv4Settings;
     settings.MTU = @(TunnelMTU);
+    NSLog(@"%@", settings.MTU);
     NEProxySettings* proxySettings = [[NEProxySettings alloc] init];
     NSString *proxyServerName = @"localhost";
     NSAssert(_httpProxyPort > 0, @"_httpProxyPort > 0");

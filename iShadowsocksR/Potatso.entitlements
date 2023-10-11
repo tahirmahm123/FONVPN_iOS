@@ -4,6 +4,8 @@
 <dict>
 	<key>aps-environment</key>
 	<string>development</string>
+	<key>com.apple.developer.game-center</key>
+	<true/>
 	<key>com.apple.developer.networking.networkextension</key>
 	<array>
 		<string>packet-tunnel-provider</string>
@@ -12,11 +14,11 @@
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.ssrlive.issr</string>
+		<string>group.com.fonvpn.ios</string>
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.ssrlive.issr</string>
+		<string>$(AppIdentifierPrefix)com.fonvpn.ios</string>
 	</array>
 </dict>
 </plist>

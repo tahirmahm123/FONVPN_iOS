@@ -1,6 +1,6 @@
-source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '9.0'
+platform :ios, '15.0'
 use_frameworks!
 
 def library
@@ -9,10 +9,15 @@ def library
 end
 
 def model
-    pod 'RealmSwift', '~> 10'
+    pod 'RealmSwift'
 end
 
 target "iShadowsocksR" do
+    pod 'ExpyTableView'
+    pod 'ReachabilitySwift'
+    pod 'Connectivity'
+    pod 'Alamofire'
+    pod 'lottie-ios'
     pod 'Aspects', :path => "./Library/Aspects/"
     pod 'Cartography', '~> 3.0.4'
     pod 'AsyncSwift'
@@ -27,12 +32,12 @@ target "iShadowsocksR" do
     model
 end
 
-target "TodayWidget" do
-    pod 'Cartography', '~> 3.0.4'
-    pod 'SwiftColor'
-    library
-    model
-end
+#target "TodayWidget" do
+#    pod 'Cartography', '~> 3.0.4'
+#    pod 'SwiftColor'
+#    library
+#    model
+#end
 
 target "PotatsoLibrary" do
     library
@@ -47,7 +52,7 @@ post_install do |installer|
     installer.generated_projects.each do |project|
         project.targets.each do |target|
             target.build_configurations.each do |config|
-                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
             end
         end
     end

@@ -87,7 +87,7 @@ Then open `iShadowsocksR.xcworkspace` with `Xcode` to Build and Run the project.
     git config --global --unset-all https.proxy
     ```
 - You must have an Apple Developer account with an annual fee of $99.
-- To compile the app running on your iOS device smoothly, you must search the project for the `com.ssrlive.issr` identifier string and replace it with your own identifier string.
+- To compile the app running on your iOS device smoothly, you must search the project for the `tm.app` identifier string and replace it with your own identifier string.
 
 - Due to an unknown reason at present, compiling Rust code from Xcode fails, so you have to manually compile it. Please run the following command in zsh (or bash):
     ```

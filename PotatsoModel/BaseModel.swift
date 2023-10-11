@@ -5,6 +5,7 @@
 //  Copyright © 2016 TouchingApp. All rights reserved.
 //
 
+import Realm
 import RealmSwift
 
 open class BaseModel: Object {

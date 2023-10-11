@@ -16,4 +16,5 @@
 @import PotatsoModel;
 @import CommUtils;
 
+#include "Managers/SimplePing.h"
 #endif /* Potatso_Bridge_Header_h */

@@ -186,6 +186,12 @@ open class DBUtils {
         try mRealm.commitWrite()
     }
 
+    public static func hardDeleteAll<T: BaseModel>(type: T.Type) throws {
+        for record in self.all(type) {
+            try hardDelete(record.uuid, type: type)
+        }
+    }
+    
     public static func hardDelete<T: BaseModel>(_ ids: [String], type: T.Type) throws {
         for id in ids {
             try hardDelete(id, type: type)

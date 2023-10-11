@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22138.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c16-I5-1jS">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22113"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash-->
+        <scene sceneID="7L6-K6-8Bn">
+            <objects>
+                <viewController storyboardIdentifier="SplashScreen" title="Splash" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c16-I5-1jS" customClass="SplashController" customModule="iShadowsocksR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NKt-T1-h7m"/>
+                        <viewControllerLayoutGuide type="bottom" id="mXE-wI-c6S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O2Q-Gm-T3F">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zz-Yl-ts8">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="0gr-Tg-veP">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashLogo" translatesAutoresizingMaskIntoConstraints="NO" id="7ze-HW-bN4">
+                                        <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7ze-HW-bN4" secondAttribute="height" multiplier="1:1" id="EOC-YU-GdL"/>
+                                            <constraint firstAttribute="width" constant="200" id="Hh8-Nz-ZMU"/>
+                                            <constraint firstAttribute="height" constant="200" id="wrt-0Y-5fG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ESg-pv-AEP">
+                                        <rect key="frame" x="118" y="636.66666666666663" width="157" height="5"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="5" id="iRh-gn-tYH"/>
+                                        </constraints>
+                                        <color key="progressTintColor" name="AccentColor"/>
+                                    </progressView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0gr-Tg-veP" secondAttribute="trailing" id="0TO-Kq-Ajr"/>
+                                    <constraint firstItem="0gr-Tg-veP" firstAttribute="top" secondItem="8zz-Yl-ts8" secondAttribute="top" id="3nl-fz-kao"/>
+                                    <constraint firstAttribute="bottom" secondItem="0gr-Tg-veP" secondAttribute="bottom" id="56f-xQ-tpB"/>
+                                    <constraint firstItem="ESg-pv-AEP" firstAttribute="centerY" secondItem="8zz-Yl-ts8" secondAttribute="centerY" multiplier="1.5" id="9ld-ff-ehu"/>
+                                    <constraint firstItem="7ze-HW-bN4" firstAttribute="centerY" secondItem="8zz-Yl-ts8" secondAttribute="centerY" id="EoI-cn-2gp"/>
+                                    <constraint firstItem="ESg-pv-AEP" firstAttribute="width" secondItem="8zz-Yl-ts8" secondAttribute="width" multiplier="0.4" id="F73-CX-zb4"/>
+                                    <constraint firstItem="7ze-HW-bN4" firstAttribute="centerX" secondItem="8zz-Yl-ts8" secondAttribute="centerX" id="KN8-kh-gmp"/>
+                                    <constraint firstItem="0gr-Tg-veP" firstAttribute="leading" secondItem="8zz-Yl-ts8" secondAttribute="leading" id="ONz-dS-96t"/>
+                                    <constraint firstItem="ESg-pv-AEP" firstAttribute="centerX" secondItem="8zz-Yl-ts8" secondAttribute="centerX" id="pJv-rb-Dq8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v8Y-H1-Oeg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8zz-Yl-ts8" secondAttribute="baseline" id="3pU-n4-L4q"/>
+                            <constraint firstItem="8zz-Yl-ts8" firstAttribute="leading" secondItem="v8Y-H1-Oeg" secondAttribute="leading" id="bHH-lv-rim"/>
+                            <constraint firstItem="8zz-Yl-ts8" firstAttribute="top" secondItem="O2Q-Gm-T3F" secondAttribute="top" id="d20-RG-Ehm"/>
+                            <constraint firstItem="v8Y-H1-Oeg" firstAttribute="trailing" secondItem="8zz-Yl-ts8" secondAttribute="trailing" id="ueW-aX-n2p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Eo-82-MrR"/>
+                    <connections>
+                        <outlet property="background" destination="0gr-Tg-veP" id="ExK-Sa-9R9"/>
+                        <outlet property="containerView" destination="8zz-Yl-ts8" id="AaL-Cc-2IS"/>
+                        <outlet property="progressView" destination="ESg-pv-AEP" id="H4C-sj-BvP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CyM-zb-RaW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3149" y="-610"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="426.66665649414062" height="930"/>
+        <image name="SplashLogo" width="512" height="512"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.7686274509803922" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
