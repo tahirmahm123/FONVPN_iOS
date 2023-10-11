@@ -12,8 +12,8 @@
 #import <asl.h>
 #import "Receipt.h"
 @import CocoaLumberjack;
-@import PotatsoLibrary;
-@import PotatsoModel;
+//@// import PotatsoLibrary;
+//@// import PotatsoModel;
 @import CommUtils;
 
 #include "Managers/SimplePing.h"

@@ -7,8 +7,8 @@
 
 import UIKit
 import Eureka
-import PotatsoLibrary
-import PotatsoModel
+// import PotatsoLibrary
+// import PotatsoModel
 
 private let kProxyFormType = "type"
 private let kProxyFormName = "name"

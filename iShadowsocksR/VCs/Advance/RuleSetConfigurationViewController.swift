@@ -7,23 +7,23 @@
 
 import UIKit
 import Eureka
-import PotatsoLibrary
-import PotatsoModel
+// import PotatsoLibrary
+// import PotatsoModel
 
 private let kRuleSetFormName = "name"
 
 class RuleSetConfigurationViewController: FormViewController {
 
-    var ruleSet: PotatsoModel.RuleSet
+    var ruleSet: RuleSet
     var rules: [Rule]
     let isEdit: Bool
     var editable: Bool {
         return ruleSet.editable && !ruleSet.isSubscribe
     }
-    var callback: ((PotatsoModel.RuleSet?) -> Void)?
+    var callback: ((RuleSet?) -> Void)?
     var editSection: Section = Section()
 
-    init(ruleSet: PotatsoModel.RuleSet? = nil, callback: ((PotatsoModel.RuleSet?) -> Void)? = nil) {
+    init(ruleSet: RuleSet? = nil, callback: ((RuleSet?) -> Void)? = nil) {
         self.callback = callback
         if let ruleSet = ruleSet {
             self.ruleSet = RuleSet(value: ruleSet)

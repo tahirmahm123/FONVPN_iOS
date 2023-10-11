@@ -7,7 +7,7 @@
 
 import Foundation
 import Cartography
-import PotatsoModel
+// import PotatsoModel
 
 class RuleSetCell: UITableViewCell {
 

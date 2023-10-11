@@ -7,7 +7,7 @@
 
 import Foundation
 import ICSMainFramework
-import PotatsoLibrary
+// import PotatsoLibrary
 import Aspects
 
 class UIManager: NSObject, AppLifeCycleProtocol {

@@ -8,7 +8,7 @@
 import Foundation
 import Cartography
 import CommUtils
-import PotatsoLibrary
+// import PotatsoLibrary
 
 class LogDetailViewController: UIViewController {
     

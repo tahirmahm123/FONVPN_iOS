@@ -7,8 +7,8 @@
 
 import UIKit
 import Eureka
-import PotatsoLibrary
-import PotatsoModel
+// import PotatsoLibrary
+// import PotatsoModel
 
 private let kRuleFormType = "type"
 private let kRuleFormValue = "value"

@@ -7,8 +7,8 @@
 
 import Foundation
 import Async
-import PotatsoModel
-import PotatsoLibrary
+// import PotatsoModel
+// import PotatsoLibrary
 import QRScanner
 
 struct Importer {

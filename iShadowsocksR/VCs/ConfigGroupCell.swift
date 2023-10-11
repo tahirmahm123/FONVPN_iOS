@@ -7,8 +7,8 @@
 
 import UIKit
 import Cartography
-import PotatsoModel
-import PotatsoLibrary
+// import PotatsoModel
+// import PotatsoLibrary
 
 class ConfigGroupCell: UITableViewCell {
     

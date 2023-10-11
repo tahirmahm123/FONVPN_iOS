@@ -7,7 +7,7 @@
 
 
 import CommUtils
-import PotatsoModel
+// import PotatsoModel
 import KissXML
 import NetworkExtension
 import ICSMainFramework

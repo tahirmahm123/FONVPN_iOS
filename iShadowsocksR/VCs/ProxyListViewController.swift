@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import PotatsoModel
+// import PotatsoModel
 import Cartography
 import Eureka
 import Async

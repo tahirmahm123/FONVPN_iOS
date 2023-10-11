@@ -10,7 +10,7 @@ import Eureka
 import ICSMainFramework
 import MessageUI
 import SafariServices
-import PotatsoLibrary
+// import PotatsoLibrary
 
 enum FeedBackType: String, CustomStringConvertible {
     case Email = "Email"

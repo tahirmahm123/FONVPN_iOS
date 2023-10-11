@@ -197,6 +197,17 @@
 		027ACDE62AD4FA1600DE65A3 /* BaseButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027ACDBD2AD4FA1600DE65A3 /* BaseButtonRow.swift */; };
 		027ACDE92AD4FF0B00DE65A3 /* ConfigGroupChooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027ACDE72AD4FF0A00DE65A3 /* ConfigGroupChooseVC.swift */; };
 		027ACDEA2AD4FF0B00DE65A3 /* ConfigGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027ACDE82AD4FF0A00DE65A3 /* ConfigGroupCell.swift */; };
+		028DC31F2AD6CCD300307928 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC215BA1CB4DAE6002AADD1 /* BaseModel.swift */; };
+		028DC3202AD6CCD300307928 /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC215B81CB4DA9E002AADD1 /* Proxy.swift */; };
+		028DC3212AD6CCD300307928 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC215BC1CB4DE6B002AADD1 /* Rule.swift */; };
+		028DC3222AD6CCD300307928 /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC215BE1CB4E06C002AADD1 /* RuleSet.swift */; };
+		028DC3232AD6CCD300307928 /* ConfigurationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC215C01CB5083B002AADD1 /* ConfigurationGroup.swift */; };
+		028DC3242AD6CCD300307928 /* DBUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D7F1831D518FF000B115F3 /* DBUtils.swift */; };
+		028DC3252AD6CE1D00307928 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8780CA20754B2000B96BF3 /* libxml2.tbd */; };
+		028DC3262AD6CE5F00307928 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC215CB1CB5E584002AADD1 /* Manager.swift */; };
+		028DC3272AD6CE5F00307928 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3034C1CCA20D80096588E /* Logging.swift */; };
+		028DC3282AD6CE5F00307928 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB3F73E1CC60B5300C2DD05 /* Image.swift */; };
+		028DC3292AD6CE5F00307928 /* Pollution.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82574A81D1D98CF007BAF40 /* Pollution.swift */; };
 		12AD9C79E2C246F3D21B814E /* Pods_PotatsoLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5494FBA89E140F817CCF2ACA /* Pods_PotatsoLibrary.framework */; };
 		1ED659011E05C73100D4BEE3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED659001E05C73100D4BEE3 /* CloudKit.framework */; };
 		1ED659061E05E88C00D4BEE3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED659051E05E88C00D4BEE3 /* GameKit.framework */; };
@@ -257,8 +268,6 @@
 		9B87060B1C1DBCCD00651424 /* dns.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B87060A1C1DBCCD00651424 /* dns.m */; };
 		9B87060D1C1DBDD400651424 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B87060C1C1DBDD400651424 /* libresolv.tbd */; };
 		9B9B15C01C21595B000B6541 /* PotatsoLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B9B15BF1C21595B000B6541 /* PotatsoLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B9B15C41C21595B000B6541 /* PotatsoLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9B15BD1C21595B000B6541 /* PotatsoLibrary.framework */; };
-		9B9B15C51C21595B000B6541 /* PotatsoLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9B15BD1C21595B000B6541 /* PotatsoLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9BB3F7411CC60B5300C2DD05 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB3F73E1CC60B5300C2DD05 /* Image.swift */; };
 		9BC215B91CB4DA9E002AADD1 /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC215B81CB4DA9E002AADD1 /* Proxy.swift */; };
 		9BC215BB1CB4DAE6002AADD1 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC215BA1CB4DAE6002AADD1 /* BaseModel.swift */; };
@@ -278,8 +287,6 @@
 		9BC600351CB29AEE00E5EA61 /* CommUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC6001D1CB2921C00E5EA61 /* CommUtils.framework */; };
 		9BC600361CB29AFF00E5EA61 /* CommUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC6001D1CB2921C00E5EA61 /* CommUtils.framework */; };
 		9BC6FFED1CB28B4B00E5EA61 /* PotatsoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BC6FFEC1CB28B4B00E5EA61 /* PotatsoModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BC6FFF11CB28B4B00E5EA61 /* PotatsoModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC6FFEA1CB28B4B00E5EA61 /* PotatsoModel.framework */; };
-		9BC6FFF21CB28B4B00E5EA61 /* PotatsoModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC6FFEA1CB28B4B00E5EA61 /* PotatsoModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9BC6FFF61CB28C4500E5EA61 /* PotatsoModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC6FFEA1CB28B4B00E5EA61 /* PotatsoModel.framework */; };
 		9BCE27A51CAE412E00B1E561 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B87060C1C1DBDD400651424 /* libresolv.tbd */; };
 		9BCE27A91CAE428200B1E561 /* TunnelInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BCE27A71CAE428200B1E561 /* TunnelInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -673,26 +680,12 @@
 			remoteGlobalIDString = 9B8705F91C1D788F00651424;
 			remoteInfo = PacketTunnel;
 		};
-		9B9B15C21C21595B000B6541 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9B0CFA031C1C0B1A007BD7C6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9B9B15BC1C21595B000B6541;
-			remoteInfo = PotatsoLibrary;
-		};
 		9BC600221CB2921C00E5EA61 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9B0CFA031C1C0B1A007BD7C6 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9BC6001C1CB2921C00E5EA61;
 			remoteInfo = CommUtils;
-		};
-		9BC6FFEF1CB28B4B00E5EA61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9B0CFA031C1C0B1A007BD7C6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9BC6FFE91CB28B4B00E5EA61;
-			remoteInfo = PotatsoModel;
 		};
 		9BDA62601CAE2576007F2581 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -808,8 +801,6 @@
 				B88874491D18186100AEF002 /* ShadowPath.framework in Embed Frameworks */,
 				3A57D263207290AC000520F8 /* Eureka.framework in Embed Frameworks */,
 				3A9502DA229AFC4000A6EAD7 /* CocoaLumberjack.framework in Embed Frameworks */,
-				9BC6FFF21CB28B4B00E5EA61 /* PotatsoModel.framework in Embed Frameworks */,
-				9B9B15C51C21595B000B6541 /* PotatsoLibrary.framework in Embed Frameworks */,
 				9BC600251CB2921C00E5EA61 /* CommUtils.framework in Embed Frameworks */,
 				9BDA62631CAE2576007F2581 /* PacketProcessor.framework in Embed Frameworks */,
 			);
@@ -1543,6 +1534,7 @@
 				B68182E6280DA0A000A119BD /* QRScanner.framework in Frameworks */,
 				3A8AC926207544C8002843E0 /* MMWormhole.framework in Frameworks */,
 				3A9502D9229AFC4000A6EAD7 /* CocoaLumberjack.framework in Frameworks */,
+				028DC3252AD6CE1D00307928 /* libxml2.tbd in Frameworks */,
 				B86B08ED1D17FB9B00613014 /* ShadowPath.framework in Frameworks */,
 				3A57D262207290AC000520F8 /* Eureka.framework in Frameworks */,
 				1EEBB8771FFFD4B500EB33C3 /* NetworkExtension.framework in Frameworks */,
@@ -1551,8 +1543,6 @@
 				3A9502D4229AF87900A6EAD7 /* CocoaLumberjackSwift.framework in Frameworks */,
 				027ACCDA2AD4F55100DE65A3 /* FirebaseMessaging in Frameworks */,
 				1ED659061E05E88C00D4BEE3 /* GameKit.framework in Frameworks */,
-				9B9B15C41C21595B000B6541 /* PotatsoLibrary.framework in Frameworks */,
-				9BC6FFF11CB28B4B00E5EA61 /* PotatsoModel.framework in Frameworks */,
 				1ED659011E05C73100D4BEE3 /* CloudKit.framework in Frameworks */,
 				1ED66DEE1E05A72300638808 /* StoreKit.framework in Frameworks */,
 				3ADE7CF9207372B3000F70AA /* yaml.framework in Frameworks */,
@@ -3153,9 +3143,7 @@
 				3A8AC8DA20753BCF002843E0 /* PBXTargetDependency */,
 				3ADE7CFD20737312000F70AA /* PBXTargetDependency */,
 				9B8706031C1D788F00651424 /* PBXTargetDependency */,
-				9B9B15C31C21595B000B6541 /* PBXTargetDependency */,
 				9BDA62611CAE2576007F2581 /* PBXTargetDependency */,
-				9BC6FFF01CB28B4B00E5EA61 /* PBXTargetDependency */,
 				9BC600231CB2921C00E5EA61 /* PBXTargetDependency */,
 				3A57D265207290AC000520F8 /* PBXTargetDependency */,
 				3A9502D7229AF87900A6EAD7 /* PBXTargetDependency */,
@@ -3855,7 +3843,7 @@
 		};
 		DD684A5F98C89E3ABC84DE74 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -3868,7 +3856,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iShadowsocksR/Pods-iShadowsocksR-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -3877,6 +3864,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028DC3262AD6CE5F00307928 /* Manager.swift in Sources */,
+				028DC3272AD6CE5F00307928 /* Logging.swift in Sources */,
+				028DC3282AD6CE5F00307928 /* Image.swift in Sources */,
+				028DC3292AD6CE5F00307928 /* Pollution.swift in Sources */,
+				028DC31F2AD6CCD300307928 /* BaseModel.swift in Sources */,
+				028DC3202AD6CCD300307928 /* Proxy.swift in Sources */,
+				028DC3212AD6CCD300307928 /* Rule.swift in Sources */,
+				028DC3222AD6CCD300307928 /* RuleSet.swift in Sources */,
+				028DC3232AD6CCD300307928 /* ConfigurationGroup.swift in Sources */,
+				028DC3242AD6CCD300307928 /* DBUtils.swift in Sources */,
 				027ACC372AD4EAA100DE65A3 /* PasswordValidation.swift in Sources */,
 				027ACDE12AD4FA1600DE65A3 /* BaseSafariViewController.swift in Sources */,
 				027ACC4E2AD4EAA100DE65A3 /* SearchControllerWrapper.swift in Sources */,
@@ -4265,20 +4262,10 @@
 			target = 9B8705F91C1D788F00651424 /* PacketTunnel */;
 			targetProxy = 9B8706021C1D788F00651424 /* PBXContainerItemProxy */;
 		};
-		9B9B15C31C21595B000B6541 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9B9B15BC1C21595B000B6541 /* PotatsoLibrary */;
-			targetProxy = 9B9B15C21C21595B000B6541 /* PBXContainerItemProxy */;
-		};
 		9BC600231CB2921C00E5EA61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9BC6001C1CB2921C00E5EA61 /* CommUtils */;
 			targetProxy = 9BC600221CB2921C00E5EA61 /* PBXContainerItemProxy */;
-		};
-		9BC6FFF01CB28B4B00E5EA61 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9BC6FFE91CB28B4B00E5EA61 /* PotatsoModel */;
-			targetProxy = 9BC6FFEF1CB28B4B00E5EA61 /* PBXContainerItemProxy */;
 		};
 		9BDA62611CAE2576007F2581 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4384,7 +4371,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -4444,7 +4431,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

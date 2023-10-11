@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import PotatsoModel
+// import PotatsoModel
 
 protocol HomePresenterProtocol: class {
     func handleRefreshUI()
