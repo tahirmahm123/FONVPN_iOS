@@ -6,15 +6,13 @@
 //
 
 import Foundation
-import ICSMainFramework
-// import PotatsoLibrary
 import Async
 import CallbackURLKit
 typealias callbackURLKit_Manager = CallbackURLKit.Manager
 
 class UrlHandler: NSObject, AppLifeCycleProtocol {
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let manager = callbackURLKit_Manager.shared
         manager.callbackURLScheme = callbackURLKit_Manager.urlSchemes?.first
         for action in [URLAction.ON, URLAction.OFF, URLAction.SWITCH] {

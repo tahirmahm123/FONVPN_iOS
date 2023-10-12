@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0246CBB12AD78A3100BD233A /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246CBB02AD78A3100BD233A /* AppConfiguration.swift */; };
 		0246CBB32AD78D1700BD233A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0246CBB22AD78D1700BD233A /* GoogleService-Info.plist */; };
+		024EA1E72AD84EB4000D06F2 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024EA1E62AD84EB4000D06F2 /* UIColor+Ext.swift */; };
 		02787D3D2AD51C0400A87478 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02787D3C2AD51C0400A87478 /* CollectionViewController.swift */; };
 		027A6B5C2AD6A64500FDACCA /* AppLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027A6B5B2AD6A64500FDACCA /* AppLogo.swift */; };
 		027A6B5E2AD6A6C000FDACCA /* Font+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027A6B5D2AD6A6C000FDACCA /* Font+Ext.swift */; };
@@ -589,8 +590,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		023B6CCA2AD8091B00A97C2F /* swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
 		0246CBB02AD78A3100BD233A /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		0246CBB22AD78D1700BD233A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		024EA1E62AD84EB4000D06F2 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		02787D3C2AD51C0400A87478 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		027A6B5B2AD6A64500FDACCA /* AppLogo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLogo.swift; sourceTree = "<group>"; };
 		027A6B5D2AD6A6C000FDACCA /* Font+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Ext.swift"; sourceTree = "<group>"; };
@@ -1659,6 +1662,7 @@
 				027ACD142AD4F7B700DE65A3 /* UIViewController+Ext.swift */,
 				027ACD152AD4F7B700DE65A3 /* UIView+Ext.swift */,
 				027ACD162AD4F7B700DE65A3 /* URL+Ext.swift */,
+				024EA1E62AD84EB4000D06F2 /* UIColor+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1873,6 +1877,7 @@
 		9B0CFA021C1C0B1A007BD7C6 = {
 			isa = PBXGroup;
 			children = (
+				023B6CCA2AD8091B00A97C2F /* swiftlint.yml */,
 				B6D82A1A29F4F3820036E3DB /* overtls.xcodeproj */,
 				B6D3435C28001EBD00527D6D /* libmaxminddb.xcodeproj */,
 				9B0CFA0D1C1C0B1B007BD7C6 /* SSR-Pro */,
@@ -1900,7 +1905,6 @@
 			isa = PBXGroup;
 			children = (
 				9B9B15BE1C21595B000B6541 /* VPNLibrary */,
-				0246CBB22AD78D1700BD233A /* GoogleService-Info.plist */,
 				027ACD8D2AD4FA1600DE65A3 /* VCs */,
 				027ACD382AD4F7B800DE65A3 /* Managers */,
 				027ACD222AD4F7B700DE65A3 /* Models */,
@@ -1912,6 +1916,7 @@
 				3A57D25920728FFE000520F8 /* Eureka.xcodeproj */,
 				B68182C8280DA02500A119BD /* QRScanner.xcodeproj */,
 				1EF602941F113A660005E0C7 /* GeoLite2-Country.mmdb */,
+				0246CBB22AD78D1700BD233A /* GoogleService-Info.plist */,
 				1ECA215E1E05E8C700B32187 /* SSR.entitlements */,
 				9BC8589F1C33B00200992032 /* SSR-Bridge-Header.h */,
 				0246CBB02AD78A3100BD233A /* AppConfiguration.swift */,
@@ -2769,6 +2774,7 @@
 				9B8706081C1D788F00651424 /* Embed Foundation Extensions */,
 				9B9B15821C1ECADF000B6541 /* Embed Frameworks */,
 				DD684A5F98C89E3ABC84DE74 /* [CP] Embed Pods Frameworks */,
+				023B6CC92AD808CC00A97C2F /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -3172,6 +3178,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		023B6CC92AD808CC00A97C2F /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  #swiftlint autocorrect --format\n  echo \"Swift Lint Working\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		543E5F4505398661EDD0F11E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3429,6 +3453,7 @@
 				027ACC482AD4EAA100DE65A3 /* Warning.swift in Sources */,
 				027ACD5F2AD4F7B800DE65A3 /* UITapGestureRecognizer+Ext.swift in Sources */,
 				027ACC3D2AD4EAA100DE65A3 /* ConnectionButton.swift in Sources */,
+				024EA1E72AD84EB4000D06F2 /* UIColor+Ext.swift in Sources */,
 				027ACD6A2AD4F7B800DE65A3 /* DisplayUtility.swift in Sources */,
 				027ACC412AD4EAA100DE65A3 /* LocationNameTag.swift in Sources */,
 				02787D3D2AD51C0400A87478 /* CollectionViewController.swift in Sources */,

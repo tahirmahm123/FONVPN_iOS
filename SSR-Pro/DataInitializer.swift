@@ -6,13 +6,12 @@
 //
 
 import UIKit
-import ICSMainFramework
 import NetworkExtension
 import Async
 
 class DataInitializer: NSObject, AppLifeCycleProtocol {
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Manager.sharedManager.setup()
         DispatchQueue.global(qos: .background).async(execute: {
             self.sync()

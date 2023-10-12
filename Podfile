@@ -12,11 +12,9 @@ target "SSR-Pro" do
     pod 'KissXML'
     pod 'Cartography', '~> 3.0.4'
     pod 'AsyncSwift'
-    pod 'SwiftColor'
     pod 'MBProgressHUD'
     pod 'ICDMaterialActivityIndicatorView', '~> 0.1.0'
     pod 'MMWormhole'
-    pod 'ICSMainFramework', :path => "./Library/ICSMainFramework/"
     pod 'KeychainAccess', '~> 3.1.1'
     pod 'RealmSwift'
     pod 'CallbackURLKit'

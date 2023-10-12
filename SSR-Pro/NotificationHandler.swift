@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ICSMainFramework
 import CocoaLumberjack
 import FirebaseMessaging
 import CocoaLumberjack

@@ -8,73 +8,73 @@
 		<array>
 			<dict>
 				<key>object</key>
-				<string>iShadowsocksR.UrlHandler</string>
+				<string>SSR_Pro.UrlHandler</string>
 			</dict>
 		</array>
 		<key>willTerminate</key>
 		<array>
 			<dict>
 				<key>object</key>
-				<string>iShadowsocksR.DataInitializer</string>
+				<string>SSR_Pro.DataInitializer</string>
 			</dict>
 		</array>
 		<key>didEnterBackground</key>
 		<array>
 			<dict>
 				<key>object</key>
-				<string>iShadowsocksR.DataInitializer</string>
+				<string>SSR_Pro.DataInitializer</string>
 			</dict>
 		</array>
 		<key>willEnterForeground</key>
 		<array>
 			<dict>
 				<key>object</key>
-				<string>iShadowsocksR.DataInitializer</string>
+				<string>SSR_Pro.DataInitializer</string>
 			</dict>
 		</array>
 		<key>remoteNotification</key>
 		<array>
 			<dict>
 				<key>object</key>
-				<string>iShadowsocksR.NotificationHandler</string>
+				<string>SSR_Pro.NotificationHandler</string>
 			</dict>
 		</array>
 		<key>didBecomeActive</key>
 		<array>
 			<dict>
 				<key>object</key>
-				<string>iShadowsocksR.AppInitializer</string>
+				<string>SSR_Pro.AppInitializer</string>
 			</dict>
 			<dict>
 				<key>object</key>
-				<string>iShadowsocksR.DataInitializer</string>
+				<string>SSR_Pro.DataInitializer</string>
 			</dict>
 			<dict>
 				<key>object</key>
-				<string>iShadowsocksR.NotificationHandler</string>
+				<string>SSR_Pro.NotificationHandler</string>
 			</dict>
 		</array>
 		<key>didFinishLaunchingWithOptions</key>
 		<array>
 			<dict>
 				<key>object</key>
-				<string>iShadowsocksR.AppInitializer</string>
+				<string>SSR_Pro.AppInitializer</string>
 			</dict>
 			<dict>
 				<key>object</key>
-				<string>iShadowsocksR.DataInitializer</string>
+				<string>SSR_Pro.DataInitializer</string>
 			</dict>
 			<dict>
 				<key>object</key>
-				<string>iShadowsocksR.UIManager</string>
+				<string>SSR_Pro.UIManager</string>
 			</dict>
 			<dict>
 				<key>object</key>
-				<string>iShadowsocksR.UrlHandler</string>
+				<string>SSR_Pro.UrlHandler</string>
 			</dict>
 			<dict>
 				<key>object</key>
-				<string>iShadowsocksR.NotificationHandler</string>
+				<string>SSR_Pro.NotificationHandler</string>
 			</dict>
 		</array>
 	</dict>

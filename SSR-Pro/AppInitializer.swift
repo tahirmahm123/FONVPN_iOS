@@ -7,11 +7,10 @@
 
 import Foundation
 import CocoaLumberjack
-//import CocoaLumberjackSwift
 
 class AppInitializer: NSObject, AppLifeCycleProtocol {
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         _  = UIViewController.shared
         
         configLogging()
@@ -26,9 +25,9 @@ class AppInitializer: NSObject, AppLifeCycleProtocol {
 
         #if DEBUG
             DDLog.add(DDTTYLogger.sharedInstance!) // TTY = Xcode console
-            DDLog.add(DDASLLogger.sharedInstance) // ASL = Apple System Logs
+            DDLog.add(DDOSLogger.sharedInstance) // ASL = Apple System Logs
             DDLog.setLevel(DDLogLevel.all, for: DDTTYLogger.self)
-            DDLog.setLevel(DDLogLevel.all, for: DDASLLogger.self)
+            DDLog.setLevel(DDLogLevel.all, for: DDOSLogger.self)
         #else
 
         #endif

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.systemBackground
         window?.makeKeyAndVisible()
         FirebaseApp.configure()
-        appConfig.loadConfig("config.plist")
+        appConfig.loadConfig("AppConfig.plist")
         if let lifeCycleItems = appConfig.lifeCycleConfig[LifeCycleKey.didFinishLaunchingWithOptions] {
             for item in lifeCycleItems{
                 _ = item.object?.application?(application, didFinishLaunchingWithOptions: launchOptions)

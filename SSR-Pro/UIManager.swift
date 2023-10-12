@@ -6,17 +6,21 @@
 //
 
 import Foundation
-import ICSMainFramework
-// import PotatsoLibrary
-//import Aspects
 
 class UIManager: NSObject, AppLifeCycleProtocol {
     
     var keyWindow: UIWindow? {
-        return UIApplication.shared.keyWindow
+        let allScenes = UIApplication.shared.connectedScenes
+        for scene in allScenes {
+            guard let windowScene = scene as? UIWindowScene else { continue }
+            for window in windowScene.windows where window.isKeyWindow {
+                return window
+            }
+        }
+        return nil
     }
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UIView.appearance().tintColor = AppColor.Brand
         
         UITableView.appearance().backgroundColor = AppColor.Background
@@ -42,7 +46,6 @@ class UIManager: NSObject, AppLifeCycleProtocol {
             vc.setViewControllers([ControllerHelper.getStartedVC(nav: vc, login: true)], animated: false)
             keyWindow?.rootViewController = vc
             DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-                
                 NotificationCenter.default.post(name: .LoginActionWithUrl, object: nil, userInfo: [
                     "token": token ?? ""
                 ]);
