@@ -9,7 +9,7 @@ import Foundation
 import Async
 // import PotatsoModel
 // import PotatsoLibrary
-import QRScanner
+//import QRScanner
 
 struct Importer {
     
@@ -54,15 +54,15 @@ struct Importer {
     }
     
     func importConfigFromQRCode() {
-        let parent = self.viewController?.navigationController
-        let scanner = QRScannerController()
-        scanner.success = { code in
-            parent?.dismiss(animated: true, completion: nil)
-            if code != nil {
-                self.onImportInput(code!)
-            }
-        }
-        parent?.present(scanner, animated: true, completion: nil)
+//        let parent = self.viewController?.navigationController
+//        let scanner = QRScannerController()
+//        scanner.success = { code in
+//            parent?.dismiss(animated: true, completion: nil)
+//            if code != nil {
+//                self.onImportInput(code!)
+//            }
+//        }
+//        parent?.present(scanner, animated: true, completion: nil)
     }
     
     func onImportInput(_ result: String) {

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import QRScanner
+//import QRScanner
 
 struct LoginScreen: View {
     @EnvironmentObject var appConstants: AppConstants

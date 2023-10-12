@@ -3,7 +3,7 @@
 platform :ios, '15.0'
 use_frameworks!
 
-target "iShadowsocksR" do
+target "SSR-Pro" do
     pod 'ExpyTableView'
     pod 'ReachabilitySwift'
     pod 'Connectivity'

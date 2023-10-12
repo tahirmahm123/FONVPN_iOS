@@ -15,7 +15,7 @@
 #import <openssl/err.h>
 #endif
 #import <StoreKit/StoreKit.h>
-#import "iShadowsocksR-Swift.h"
+#import "SSR_Pro-Swift.h"
 
 NSString *kReceiptBundleIdentifier				= @"BundleIdentifier";
 NSString *kReceiptBundleIdentifierData			= @"BundleIdentifierData";
