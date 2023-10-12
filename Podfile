@@ -15,6 +15,7 @@ target "SSR-Pro" do
     pod 'MBProgressHUD'
     pod 'ICDMaterialActivityIndicatorView', '~> 0.1.0'
     pod 'MMWormhole'
+    pod 'Eureka'
     pod 'KeychainAccess', '~> 3.1.1'
     pod 'RealmSwift'
     pod 'CallbackURLKit'
