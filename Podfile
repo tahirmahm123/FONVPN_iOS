@@ -3,50 +3,45 @@
 platform :ios, '15.0'
 use_frameworks!
 
-def library
-    pod 'ICSMainFramework', :path => "./Library/ICSMainFramework/"
-    pod 'KeychainAccess', '~> 3.1.1'
-end
-
-def model
-    pod 'RealmSwift'
-end
-
 target "iShadowsocksR" do
     pod 'ExpyTableView'
     pod 'ReachabilitySwift'
     pod 'Connectivity'
     pod 'Alamofire'
     pod 'lottie-ios'
-    pod 'Aspects', :path => "./Library/Aspects/"
+    pod 'KissXML'
     pod 'Cartography', '~> 3.0.4'
     pod 'AsyncSwift'
     pod 'SwiftColor'
     pod 'MBProgressHUD'
     pod 'ICDMaterialActivityIndicatorView', '~> 0.1.0'
-    pod 'ICSPullToRefresh', '~> 0.6'
-    pod 'ISO8601DateFormatter', '~> 0.8'
-    pod 'ObjectMapper'
-    pod 'PSOperations', '~> 5.0'
-    library
-    model
+    pod 'MMWormhole'
+    pod 'ICSMainFramework', :path => "./Library/ICSMainFramework/"
+    pod 'KeychainAccess', '~> 3.1.1'
+    pod 'RealmSwift'
+    pod 'CallbackURLKit'
+    pod 'CocoaAsyncSocket'
+    pod 'CocoaLumberjack/Swift'
 end
 
-#target "TodayWidget" do
-#    pod 'Cartography', '~> 3.0.4'
-#    pod 'SwiftColor'
+target "PacketTunnel" do
+  pod 'CocoaLumberjack/Swift'
+  pod 'MMWormhole'
+  pod 'CocoaAsyncSocket'
+end
+
+target "PacketProcessor" do
+  pod 'CocoaAsyncSocket'
+end
+
+#target "PotatsoLibrary" do
 #    library
 #    model
 #end
-
-target "PotatsoLibrary" do
-    library
-    model
-end
-
-target "PotatsoModel" do
-    model
-end
+#
+#target "PotatsoModel" do
+#    model
+#end
 
 post_install do |installer|
     installer.generated_projects.each do |project|

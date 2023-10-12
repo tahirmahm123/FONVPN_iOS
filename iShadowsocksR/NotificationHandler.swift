@@ -7,7 +7,7 @@
 
 import Foundation
 import ICSMainFramework
-import CocoaLumberjackSwift
+import CocoaLumberjack
 import FirebaseMessaging
 import CocoaLumberjack
 import Alamofire

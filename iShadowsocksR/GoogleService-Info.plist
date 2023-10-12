@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDSMnwqcv4n5k--HgXgF0dcgS1nT1ojWG8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>792411269131</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.fonvpn.ios</string>
+	<key>PROJECT_ID</key>
+	<string>pc-api-7552385713283046003-534</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pc-api-7552385713283046003-534.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:792411269131:ios:93ea75629508c8bb0d7f0e</string>
+</dict>
+</plist>
