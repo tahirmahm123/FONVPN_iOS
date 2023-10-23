@@ -8,73 +8,73 @@
 		<array>
 			<dict>
 				<key>object</key>
-				<string>SSR_Pro.UrlHandler</string>
+				<string>MainApp.UrlHandler</string>
 			</dict>
 		</array>
 		<key>willTerminate</key>
 		<array>
 			<dict>
 				<key>object</key>
-				<string>SSR_Pro.DataInitializer</string>
+				<string>MainApp.DataInitializer</string>
 			</dict>
 		</array>
 		<key>didEnterBackground</key>
 		<array>
 			<dict>
 				<key>object</key>
-				<string>SSR_Pro.DataInitializer</string>
+				<string>MainApp.DataInitializer</string>
 			</dict>
 		</array>
 		<key>willEnterForeground</key>
 		<array>
 			<dict>
 				<key>object</key>
-				<string>SSR_Pro.DataInitializer</string>
+				<string>MainApp.DataInitializer</string>
 			</dict>
 		</array>
 		<key>remoteNotification</key>
 		<array>
 			<dict>
 				<key>object</key>
-				<string>SSR_Pro.NotificationHandler</string>
+				<string>MainApp.NotificationHandler</string>
 			</dict>
 		</array>
 		<key>didBecomeActive</key>
 		<array>
 			<dict>
 				<key>object</key>
-				<string>SSR_Pro.AppInitializer</string>
+				<string>MainApp.AppInitializer</string>
 			</dict>
 			<dict>
 				<key>object</key>
-				<string>SSR_Pro.DataInitializer</string>
+				<string>MainApp.DataInitializer</string>
 			</dict>
 			<dict>
 				<key>object</key>
-				<string>SSR_Pro.NotificationHandler</string>
+				<string>MainApp.NotificationHandler</string>
 			</dict>
 		</array>
 		<key>didFinishLaunchingWithOptions</key>
 		<array>
 			<dict>
 				<key>object</key>
-				<string>SSR_Pro.AppInitializer</string>
+				<string>MainApp.AppInitializer</string>
 			</dict>
 			<dict>
 				<key>object</key>
-				<string>SSR_Pro.DataInitializer</string>
+				<string>MainApp.DataInitializer</string>
 			</dict>
 			<dict>
 				<key>object</key>
-				<string>SSR_Pro.UIManager</string>
+				<string>MainApp.UIManager</string>
 			</dict>
 			<dict>
 				<key>object</key>
-				<string>SSR_Pro.UrlHandler</string>
+				<string>MainApp.UrlHandler</string>
 			</dict>
 			<dict>
 				<key>object</key>
-				<string>SSR_Pro.NotificationHandler</string>
+				<string>MainApp.NotificationHandler</string>
 			</dict>
 		</array>
 	</dict>

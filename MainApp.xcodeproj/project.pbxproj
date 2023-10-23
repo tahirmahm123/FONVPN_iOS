@@ -753,7 +753,7 @@
 		027EC9EA2AE14D3B00EEBE01 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		02E808F32AE141D0003F8588 /* SimplePingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePingManager.swift; sourceTree = "<group>"; };
 		185DEA4D48EC78138A5B14EA /* Pods-iShadowsocksR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iShadowsocksR.release.xcconfig"; path = "Pods/Target Support Files/Pods-iShadowsocksR/Pods-iShadowsocksR.release.xcconfig"; sourceTree = "<group>"; };
-		1ECA215E1E05E8C700B32187 /* SSR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SSR.entitlements; sourceTree = "<group>"; };
+		1ECA215E1E05E8C700B32187 /* AppSign.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppSign.entitlements; sourceTree = "<group>"; };
 		1ECA21631E05EA6D00B32187 /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
 		1ED659001E05C73100D4BEE3 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		1ED659051E05E88C00D4BEE3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -777,7 +777,7 @@
 		59E49C42B4D4799312B7E5E4 /* Pods-PacketProcessor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketProcessor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PacketProcessor/Pods-PacketProcessor.debug.xcconfig"; sourceTree = "<group>"; };
 		75A0A552FFF41C1304929205 /* Pods_SSR_Pro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSR_Pro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		808016C138D535AAB02209A8 /* Pods_PacketTunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PacketTunnel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B0CFA0B1C1C0B1B007BD7C6 /* SSR-Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSR-Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B0CFA0B1C1C0B1B007BD7C6 /* MainApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B0CFA0E1C1C0B1B007BD7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B0CFA151C1C0B1B007BD7C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B0CFA1A1C1C0B1B007BD7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -813,7 +813,7 @@
 		9BC6002E1CB299DE00E5EA61 /* JSONUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONUtils.m; sourceTree = "<group>"; };
 		9BC6002F1CB299DE00E5EA61 /* NSError+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Helper.h"; sourceTree = "<group>"; };
 		9BC600301CB299DE00E5EA61 /* NSError+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSError+Helper.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		9BC8589F1C33B00200992032 /* SSR-Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SSR-Bridge-Header.h"; sourceTree = "<group>"; };
+		9BC8589F1C33B00200992032 /* App-Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "App-Bridge-Header.h"; sourceTree = "<group>"; };
 		9BCE27A71CAE428200B1E561 /* TunnelInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TunnelInterface.h; sourceTree = "<group>"; };
 		9BCE27A81CAE428200B1E561 /* TunnelInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TunnelInterface.m; sourceTree = "<group>"; };
 		9BDA625B1CAE2576007F2581 /* PacketProcessor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PacketProcessor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1840,7 +1840,7 @@
 				023B6CCA2AD8091B00A97C2F /* swiftlint.yml */,
 				B6D82A1A29F4F3820036E3DB /* overtls.xcodeproj */,
 				B6D3435C28001EBD00527D6D /* libmaxminddb.xcodeproj */,
-				9B0CFA0D1C1C0B1B007BD7C6 /* SSR-Pro */,
+				9B0CFA0D1C1C0B1B007BD7C6 /* MainApp */,
 				9B8705FB1C1D788F00651424 /* PacketTunnel */,
 				9BDA625C1CAE2576007F2581 /* PacketProcessor */,
 				9BC6001E1CB2921C00E5EA61 /* CommUtils */,
@@ -1853,7 +1853,7 @@
 		9B0CFA0C1C1C0B1B007BD7C6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B0CFA0B1C1C0B1B007BD7C6 /* SSR-Pro.app */,
+				9B0CFA0B1C1C0B1B007BD7C6 /* MainApp.app */,
 				9B8705FA1C1D788F00651424 /* PacketTunnel.appex */,
 				9BDA625B1CAE2576007F2581 /* PacketProcessor.framework */,
 				9BC6001D1CB2921C00E5EA61 /* CommUtils.framework */,
@@ -1861,7 +1861,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9B0CFA0D1C1C0B1B007BD7C6 /* SSR-Pro */ = {
+		9B0CFA0D1C1C0B1B007BD7C6 /* MainApp */ = {
 			isa = PBXGroup;
 			children = (
 				9B9B15BE1C21595B000B6541 /* VPNLibrary */,
@@ -1875,8 +1875,8 @@
 				3A6DD4F2207366BF00BDF530 /* YAML.xcodeproj */,
 				1EF602941F113A660005E0C7 /* GeoLite2-Country.mmdb */,
 				0246CBB22AD78D1700BD233A /* GoogleService-Info.plist */,
-				1ECA215E1E05E8C700B32187 /* SSR.entitlements */,
-				9BC8589F1C33B00200992032 /* SSR-Bridge-Header.h */,
+				1ECA215E1E05E8C700B32187 /* AppSign.entitlements */,
+				9BC8589F1C33B00200992032 /* App-Bridge-Header.h */,
 				0246CBB02AD78A3100BD233A /* AppConfiguration.swift */,
 				9B0CFA0E1C1C0B1B007BD7C6 /* AppDelegate.swift */,
 				024EA2352AD85327000D06F2 /* AppEnvironment.swift */,
@@ -1893,7 +1893,7 @@
 				B8319A0F1D1BD696001E50C2 /* Localizable.strings */,
 				024EA2522ADDC391000D06F2 /* FakeStore.storekit */,
 			);
-			path = "SSR-Pro";
+			path = MainApp;
 			sourceTree = "<group>";
 		};
 		9B8705FB1C1D788F00651424 /* PacketTunnel */ = {
@@ -2713,9 +2713,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9B0CFA0A1C1C0B1A007BD7C6 /* SSR-Pro */ = {
+		9B0CFA0A1C1C0B1A007BD7C6 /* MainApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B0CFA281C1C0B1B007BD7C6 /* Build configuration list for PBXNativeTarget "SSR-Pro" */;
+			buildConfigurationList = 9B0CFA281C1C0B1B007BD7C6 /* Build configuration list for PBXNativeTarget "MainApp" */;
 			buildPhases = (
 				D36E9F0177778530B0CF35C1 /* [CP] Check Pods Manifest.lock */,
 				B8CF2F9A1D3DF6C7009C9FF3 /* Confidential */,
@@ -2739,13 +2739,13 @@
 				9BC600231CB2921C00E5EA61 /* PBXTargetDependency */,
 				3A09F9052310280E0073E0EE /* PBXTargetDependency */,
 			);
-			name = "SSR-Pro";
+			name = MainApp;
 			packageProductDependencies = (
 				027ACCD72AD4F55100DE65A3 /* FirebaseCrashlytics */,
 				027ACCD92AD4F55100DE65A3 /* FirebaseMessaging */,
 			);
 			productName = Potatso;
-			productReference = 9B0CFA0B1C1C0B1B007BD7C6 /* SSR-Pro.app */;
+			productReference = 9B0CFA0B1C1C0B1B007BD7C6 /* MainApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9B8705F91C1D788F00651424 /* PacketTunnel */ = {
@@ -2876,7 +2876,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9B0CFA061C1C0B1A007BD7C6 /* Build configuration list for PBXProject "SSR-Pro" */;
+			buildConfigurationList = 9B0CFA061C1C0B1A007BD7C6 /* Build configuration list for PBXProject "MainApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -2927,7 +2927,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				9B0CFA0A1C1C0B1A007BD7C6 /* SSR-Pro */,
+				9B0CFA0A1C1C0B1A007BD7C6 /* MainApp */,
 				9B8705F91C1D788F00651424 /* PacketTunnel */,
 				9BDA625A1CAE2576007F2581 /* PacketProcessor */,
 				9BC6001C1CB2921C00E5EA61 /* CommUtils */,
@@ -3194,7 +3194,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "file=\"${PROJECT_DIR}/SSR-Pro/Confidential.h\"\nif [ -f $file ]\nthen\n    echo \"Confidential.h found.\"\nelse\n    echo \"Confidential.h not found.\"\n    src=\"${PROJECT_DIR}/SSR-Pro/DefaultConfidential.h\"\n    rsync -av $src $file\nfi\n";
+			shellScript = "file=\"${PROJECT_DIR}/MainApp/Confidential.h\"\nif [ -f $file ]\nthen\n    echo \"Confidential.h found.\"\nelse\n    echo \"Confidential.h not found.\"\n    src=\"${PROJECT_DIR}/MainApp/DefaultConfidential.h\"\n    rsync -av $src $file\nfi\n";
 		};
 		D36E9F0177778530B0CF35C1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3732,7 +3732,7 @@
 			baseConfigurationReference = 45920930430A8788C0322F7C /* Pods-SSR-Pro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "SSR-Pro/SSR.entitlements";
+				CODE_SIGN_ENTITLEMENTS = MainApp/AppSign.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -3756,7 +3756,7 @@
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/SSR-Pro/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MainApp/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "FON VPN";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -3771,7 +3771,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "SSR-Pro/SSR-Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MainApp/App-Bridge-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3784,7 +3784,7 @@
 			baseConfigurationReference = DC86CAD5573282FC0E42D8F1 /* Pods-SSR-Pro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "SSR-Pro/SSR.entitlements";
+				CODE_SIGN_ENTITLEMENTS = MainApp/AppSign.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -3807,7 +3807,7 @@
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/SSR-Pro/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MainApp/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "FON VPN";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -3821,7 +3821,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "SSR-Pro/SSR-Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MainApp/App-Bridge-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -4132,7 +4132,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B0CFA061C1C0B1A007BD7C6 /* Build configuration list for PBXProject "SSR-Pro" */ = {
+		9B0CFA061C1C0B1A007BD7C6 /* Build configuration list for PBXProject "MainApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B0CFA261C1C0B1B007BD7C6 /* Debug */,
@@ -4141,7 +4141,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B0CFA281C1C0B1B007BD7C6 /* Build configuration list for PBXNativeTarget "SSR-Pro" */ = {
+		9B0CFA281C1C0B1B007BD7C6 /* Build configuration list for PBXNativeTarget "MainApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B0CFA291C1C0B1B007BD7C6 /* Debug */,

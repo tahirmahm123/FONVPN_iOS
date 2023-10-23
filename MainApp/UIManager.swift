@@ -32,6 +32,11 @@ class UIManager: NSObject, AppLifeCycleProtocol {
         UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().backgroundColor = AppColor.TabBackground
         UITabBar.appearance().tintColor = AppColor.TabItemSelected
+        if UIView().traitCollection.userInterfaceStyle == .dark {
+            UIApplication.shared.setAlternateIconName("AppIcon-DarkMode")
+        } else {
+            UIApplication.shared.setAlternateIconName(nil)
+        }
         var isUniversalLinkClick: Bool = false
         if let activityDictionary = launchOptions?[UIApplication.LaunchOptionsKey.userActivityDictionary] as? [AnyHashable: Any] {
             if activityDictionary["UIApplicationLaunchOptionsUserActivityKey"] is NSUserActivity {
