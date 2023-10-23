@@ -57,7 +57,7 @@ struct SupportCenterView: View {
             }
         }
         .navigationBarTitle("Support Center", displayMode: .large)
-        .listStyle(.plain)
+//        .listStyle(.plain)
         .alert(isPresented: $deleteProfileShown) {
             Alert(
                 title: Text("Reset VPN profile"),

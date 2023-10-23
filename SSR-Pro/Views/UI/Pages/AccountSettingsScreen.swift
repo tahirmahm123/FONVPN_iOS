@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 enum ProfileAlertType {
     case logout
     case delete
@@ -18,6 +19,7 @@ struct AccountSettingsScreen: View {
     @State private var showPayment = false
     @State private var selectedAlert: ProfileAlertType = .logout
     @State private var activeDeviceShown = false
+    let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     var body: some View {
         List{
             Section(header: Text("Account Details")) {
@@ -99,8 +101,35 @@ struct AccountSettingsScreen: View {
                     }
                 }
             }
+            
+            Section(header: Text("App Settings")) {
+                if let version = version {
+                    VStack(alignment: .leading) {
+                        Text("Version")
+                        Text("v\(version)")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                }
+                if let lang = Locale.current.languageCode,
+                   let langName = Locale.current.localizedString(forLanguageCode: lang),
+                   let url = URL(string: UIApplication.openSettingsURLString),
+                   UIApplication.shared.canOpenURL(url) {
+                    Button(action: {
+                        UIApplication.shared.open(url)
+                    }) {
+                        VStack(alignment: .leading) {
+                            Text("Language")
+                            Text(langName)
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                            
+                        }
+                    }
+                }
+            }
         }
-        .listStyle(.plain)
+//        .listStyle(.plain)
         .navigationBarTitle("Account Settings", displayMode: .large)
         .sheet(isPresented: $activeDeviceShown) {
             ActiveDevicesView(onDismiss: {

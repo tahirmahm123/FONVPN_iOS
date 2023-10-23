@@ -9,12 +9,13 @@ import SwiftUI
 
 struct GetStarted: View {
     @EnvironmentObject var router: AppRouter
-    let timer = Timer.publish(every: 4, on: .main, in: .defaultRunLoopMode).autoconnect()
+    let timer = Timer.publish(every: 4, on: .main, in: RunLoop.Mode.common).autoconnect()
     @State var showLogin = false
     var body: some View {
         NavigationView {
             VStack{
-                Image("WhiteLogo")
+                AppLogo(logoHeight: 42, fontSize: 22, variant: .dark)
+                    .padding(.top)
                 PageViewControl()
                     .frame(height: UIScreen.main.bounds.height*0.65)
 //                Button(action: {

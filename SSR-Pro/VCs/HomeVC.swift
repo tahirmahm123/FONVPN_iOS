@@ -6,8 +6,6 @@
 //
 
 import Foundation
-// import PotatsoLibrary
-// import PotatsoModel
 import Eureka
 import ICDMaterialActivityIndicatorView
 import Cartography
@@ -84,7 +82,7 @@ class HomeVC: FormViewController, UINavigationControllerDelegate, HomePresenterP
 
     func updateConnectButton(by value: VPNStatus) {
         connectButton.isEnabled = [VPNStatus.on, VPNStatus.off].contains(value)
-        connectButton.setTitleColor(UIColor.init(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: UIControlState())
+        connectButton.setTitleColor(UIColor.init(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: UIControl.State())
         switch value {
         case .connecting, .disconnecting:
             connectButton.animating = true
@@ -223,7 +221,7 @@ class HomeVC: FormViewController, UINavigationControllerDelegate, HomePresenterP
         return false
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             DBUtils.writeSharedRealm(completionQueue: .main) { error in
                 if error == nil {
@@ -237,7 +235,7 @@ class HomeVC: FormViewController, UINavigationControllerDelegate, HomePresenterP
         }
     }
 
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
 
@@ -264,8 +262,8 @@ class HomeVC: FormViewController, UINavigationControllerDelegate, HomePresenterP
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        view.bringSubview(toFront: connectButton)
-        tableView?.contentInset = UIEdgeInsetsMake(0, 0, connectButtonHeight, 0)
+        view.bringSubviewToFront(connectButton)
+        tableView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: connectButtonHeight, right: 0)
     }
 
     func setupLayout() {
@@ -285,7 +283,7 @@ class HomeVC: FormViewController, UINavigationControllerDelegate, HomePresenterP
 
     lazy var titleButton: UIButton = {
         let b = UIButton(type: .custom)
-        b.setTitleColor(UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0), for: UIControlState())
+        b.setTitleColor(UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0), for: UIControl.State())
         b.addTarget(self, action: #selector(HomeVC.handleTitleButtonPressed), for: .touchUpInside)
         if let titleLabel = b.titleLabel {
             titleLabel.font = UIFont.boldSystemFont(ofSize: titleLabel.font.pointSize)

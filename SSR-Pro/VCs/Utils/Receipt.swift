@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ICSMainFramework
 import StoreKit
 
 class Receipt: NSObject, SKRequestDelegate {

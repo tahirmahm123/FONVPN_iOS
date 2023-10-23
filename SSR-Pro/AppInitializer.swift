@@ -14,6 +14,12 @@ class AppInitializer: NSObject, AppLifeCycleProtocol {
         _  = UIViewController.shared
         
         configLogging()
+        
+        if userDefaults.bool(forKey: isLogedIn) {
+            Task {
+                await PurchaseManager.shared.updatePurchasedProducts()
+            }
+        }
         return true
     }
 

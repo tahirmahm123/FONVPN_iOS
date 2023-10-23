@@ -155,7 +155,6 @@ struct LocationsWrapperVC: UIViewControllerRepresentable {
         
         func randomServerPressed(){
             userDefaults.set(  ApiManager.shared.getRandomServer()?.id, forKey: LastSelectedServer)
-            BackButtonTapped = false
             userDefaults.set(false, forKey: AutoSelectFastServer)
             userDefaults.set(true, forKey: SelectRandomServer)
             
@@ -164,10 +163,8 @@ struct LocationsWrapperVC: UIViewControllerRepresentable {
         func fastestServerPressed(){
             userDefaults.set(  ApiManager.shared.getFastestServer()?.id, forKey: LastSelectedServer)
             if userDefaults.bool(forKey: AutoSelectFastServer){
-                BackButtonTapped = true
             } else {
                 userDefaults.set(true, forKey: AutoSelectFastServer)
-                BackButtonTapped = false
             }
             userDefaults.set(false, forKey: SelectRandomServer)
             
@@ -480,7 +477,6 @@ struct LocationsWrapperVC: UIViewControllerRepresentable {
                     print("Last Selected Serverr: \(userDefaults.integer(forKey: LastSelectedServer))")
                     print("Recent Selected Serverr: \(server.id) \(userDefaults.integer(forKey: RecentSelectedServer))")
                     onServerSelection()
-                    BackButtonTapped = false
                 }
             }
             tableView.deselectRow(at: indexPath, animated: false)

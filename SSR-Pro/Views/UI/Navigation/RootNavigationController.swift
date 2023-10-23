@@ -24,7 +24,7 @@ struct RootNavigationController<RootView: View>: UIViewControllerRepresentable {
 
     func makeUIViewController(context: Context) -> UINavigationController {
         let vc = UIController(rootView: rootView, navigationBarTitle: navigationBarTitle, navigationBarHidden: navigationBarHidden)
-        nav.addChildViewController(vc)
+        nav.addChild(vc)
         return nav
     }
 

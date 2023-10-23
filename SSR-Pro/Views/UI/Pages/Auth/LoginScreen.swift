@@ -14,8 +14,8 @@ struct LoginScreen: View {
     @State var loginWithAccountID = false
     @State var signInWithEmail = false
     @State private var accountId = ""
-    @State private var email = "testing007"
-    @State private var password = "testing"
+    @State private var email = ""
+    @State private var password = ""
     @State private var showToast = false
     @State private var showActiveDevices = false
     @State private var errorShow = false
@@ -39,7 +39,7 @@ struct LoginScreen: View {
                             Spacer()
                         }
                         HStack {
-                            Text("Sign in to VIS VPN")
+                            Text("Sign in to \(appName)")
                                 .font(Font.system(size: 24, weight: .semibold))
                                 .foregroundColor(.gray)
                             Spacer()
@@ -149,16 +149,16 @@ struct LoginScreen: View {
 //                            .cornerRadius(10)
 //                        }
 //                        HStack {
-//                            Text("New to VIS VPN?")
+//                            Text("New to \(appName)?")
 ////                            Button(action: {
-////                                
+////
 ////                            }) {
 //                            NavigationLink(destination: RegisterScreen()) {
 //                                Text("Register")
 //                                    .foregroundColor(Color("AccentColor"))
 //                            }
 //                        }
-//                        
+//
                         Button(action: {
                             
                         }) {
@@ -170,26 +170,18 @@ struct LoginScreen: View {
                 .frame(minHeight: geometry.size.height)
                 .padding(.horizontal)
                 .onTapGesture {
-                    UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.endEditing(true)
+                    UIApplication.shared.endEditing()
                 }
                 .sheet(isPresented: $showActiveDevices) {
                     ActiveDevicesView(onDismiss: {
-                        
+                        showActiveDevices.toggle()
+                    }, onContinue: {
+                        showActiveDevices.toggle()
+                        userDefaults.setValue(true, forKey: isLogedIn)
+                        router.setRoot(views: [SplashController.vc() ])
                     })
                 }
             }
-                //        }
-                //        edgesIgnoringSafeArea(.)
-//            .navigationBarItems(leading: Button(action: {
-//                router.pop()
-//            }) {
-//                HStack(spacing: 0){
-//                    Image(systemName: "chevron.left")
-//                    Text("Back")
-//                }
-//            })
-            
-            
         }
         .toast(isPresenting: $showToast) {
             AlertToast(displayMode: .alert, type: .loading, title: "Logging in")

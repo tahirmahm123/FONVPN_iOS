@@ -11,11 +11,13 @@ struct MainRootView: View {
     let nav: UINavigationController
     let router = AppRouter()
     let appConstants = AppConstants.shared
+    let productManager = PurchaseManager.shared
     let view: AnyView
     var body: some View {
         view
             .environmentObject(router)
             .environmentObject(appConstants)
+            .environmentObject(productManager)
             .onAppear {
                 router.nav = nav
             }

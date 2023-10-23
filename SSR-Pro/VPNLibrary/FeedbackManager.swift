@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ICSMainFramework
 
 class FeedbackManager {
     static let shared = FeedbackManager()

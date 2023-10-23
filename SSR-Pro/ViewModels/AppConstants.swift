@@ -16,6 +16,7 @@ class AppConstants: ObservableObject {
     let gradientColors = [Color("PrimaryGradientColor1"), Color("PrimaryGradientColor2")]
     @Published var loggedIn: Bool
     @Published var userName: String
+    @Published var isFta: Bool
     @Published var isExpired: String
     @Published var expiryDate: String
     @Published var timeStamp: Double
@@ -59,7 +60,7 @@ class AppConstants: ObservableObject {
         return server
     }
     
-    var fastestServer: Servers? {
+    func fastestServer() -> Servers? {
         let ip = ApiManager.shared.serverPing.max(by:{$0.value > $1.value})?.key
         return ApiManager.shared.serversList?.filter {
             return $0.ip == ip
@@ -93,6 +94,7 @@ class AppConstants: ObservableObject {
         userName = userDefaults.string(forKey: UserName) ?? "Testing"
         isExpired = userDefaults.string(forKey: isPaidUser) ?? "Testing"
         expiryDate = userDefaults.string(forKey: ExpiryDate) ?? "Testing"
+        isFta = ApiManager.shared.usersData?.isFta ?? false
         timeStamp = userDefaults.double(forKey: TimeStamp)
         plan = "\(ApiManager.shared.usersData?.plan ?? "Premium")"
         loggedInDevices = ApiManager.shared.usersData?.loggedInSessions ?? 1
@@ -111,6 +113,7 @@ class AppConstants: ObservableObject {
     func refreshData() {
         loggedIn = userDefaults.bool(forKey: isLogedIn) 
         userName = userDefaults.string(forKey: UserName) ?? "Testing"
+        isFta = ApiManager.shared.usersData?.isFta ?? false
         isExpired = userDefaults.string(forKey: isPaidUser) ?? "Testing"
         expiryDate = userDefaults.string(forKey: ExpiryDate) ?? "Testing"
         timeStamp = userDefaults.double(forKey: TimeStamp)
@@ -201,22 +204,19 @@ class AppConstants: ObservableObject {
 //            }
 //        })
     }
-    func plans(completion: @escaping ([SKProduct], String) -> Void ) {
-//        InternetAvailability.shared.connectivityStatus(completion: { (InternetStatus) -> Void in
-//            if InternetStatus{
-                ApiManager.shared.fetchPlans(completion: { (success) -> Void in
-                    if success {
-                        let planWithMaxSavePercent = ApiManager.shared.plansData!.max(by: { $0.savePercent ?? 0 < $1.savePercent ?? 0 })
-                        let popular = planWithMaxSavePercent?.identifier ?? ""
-                        IAPManager.shared.fetchAvailableProducts(completion: { products in
-                            completion(products, popular)
-                        })
-                    }
-                })
-//            } else {
-//                self.showNoInternetMessage(self)
-//            }
-//        })
+    func plans() async -> ([Product], String) {
+        let identifiers = await ApiManager.shared.fetchPlans()
+        if identifiers.count > 0 {
+            let planWithMaxSavePercent = ApiManager.shared.plansData!.max(by: { $0.savePercent ?? 0 < $1.savePercent ?? 0 })
+            let popular = planWithMaxSavePercent?.identifier ?? ""
+            do {
+                let products = try await Product.products(for: identifiers)
+                return (products, popular)
+            } catch {
+                return ([], popular)
+            }
+        }
+        return ([], "")
     }
     
     func location(completion: @escaping () -> Void ) {
@@ -269,28 +269,6 @@ class AppConstants: ObservableObject {
         userDefaults.setValue(nil, forKey: SelectedProtocol)
         userDefaults.setValue(nil, forKey: SelectedApperance)
         userDefaults.setValue(nil, forKey: QuickSettingsServer)
-    }
-    
-    func generateKeys(){
-        InternetAvailability.shared.connectivityStatus(completion: { (InternetStatus) -> Void in
-            if InternetStatus{
-                if userDefaults.string(forKey: LocalIp) == nil  || userDefaults.string(forKey: LocalIp) == ""{
-                    InterfaceForKey.privateKey = Interface.generatePrivateKey()
-                    let privateKey = InterfaceForKey.privateKey ?? ""
-                    let publicKey = InterfaceForKey.publicKey ?? ""
-//                    self.showHUD()
-                    ApiManager.shared.generateWireGuardKeys(publicKey: publicKey, privateKey: privateKey, completion: { success in
-//                        self.hideHUD()
-                        if success{
-                            print("Generated")
-                        }
-                    })
-                }
-            }else {
-//                self.showNoInternetMessage(self)
-                print("internet issue")
-            }
-        })
     }
     
     func validateNotificationPermission(action: @escaping (() -> Void), onSuccess: @escaping (() -> Void) = {}) {

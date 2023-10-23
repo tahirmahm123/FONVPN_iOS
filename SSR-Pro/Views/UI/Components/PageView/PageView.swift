@@ -10,6 +10,7 @@ import Foundation
 
 struct PageView<Page: View>: View {
     var pages: [Page]
+    @State var timer: Timer?
     @State private var currentPage = 0
 
     var body: some View {
@@ -24,10 +25,14 @@ struct PageView<Page: View>: View {
             print("PageView Appeared")
             startTimer()
         }
+        .onDisappear {
+            timer?.invalidate()
+        }
+        
     }
     
     func startTimer() {
-        Timer.scheduledTimer(withTimeInterval: 4, repeats: true) { _ in
+        $timer.wrappedValue = Timer.scheduledTimer(withTimeInterval: 4, repeats: true) { _ in
             if $currentPage.wrappedValue == 2 {
                 DispatchQueue.main.asyncAfter(deadline: .now()+2) {
                     $currentPage.wrappedValue = 0

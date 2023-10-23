@@ -137,7 +137,7 @@ class DotHelper: NSObject {
     
         /// Returns the dot pointing to the coordinates
     func redDot() -> UIView {
-        let color = vpnStatus == .connected ? UIColor.green : UIColor.red
+        let color = vpnStatus == .on ? UIColor.green : UIColor.red
         let outerRadius = 30.0
         let outerDot = UIView(frame: CGRect(x: locationX - outerRadius,
                                             y: locationY - outerRadius,
@@ -153,7 +153,7 @@ class DotHelper: NSObject {
                                             y: outerRadius - innerRadius,
                                             width: innerRadius*2,
                                             height: innerRadius*2))
-        innerDot.backgroundColor = vpnStatus == .connected ? UIColor.green : UIColor.red
+        innerDot.backgroundColor = vpnStatus == .on ? UIColor.green : UIColor.red
         
         innerDot.layer.cornerRadius = CGFloat(innerRadius)
         outerDot.addSubview(innerDot)

@@ -37,6 +37,6 @@ extension Font {
         return Font.urbanist(size: size, weight: .thin)
     }
     static func logoFont(size: CGFloat) -> Font {
-        return Font.custom("SF Pro Text", size: size)
+        return Font.system(size: size, weight: .heavy)
     }
 }

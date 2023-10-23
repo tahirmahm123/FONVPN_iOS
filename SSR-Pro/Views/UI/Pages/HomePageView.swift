@@ -20,41 +20,58 @@ struct HomePageView: View {
     @State var recentServer: Servers?
     @State var currentLocation: LocationModel?
     @State var loadingLocation: Bool = true
+    @State private var showPayment = false
     @State private var points: [CoordinateData] = []
     var headerBgColor: String {
-        switch vpnStatus {
-            case .off:
-                return "VPNDisconnectedColor"
-            case .connecting, .disconnecting:
-                return "VPNProcessingColor"
-            case .on:
-                return "VPNConnectedColor"
+        if loading {
+            return "VPNProcessingColor"
+        } else {
+            switch vpnStatus {
+                case .off:
+                    return "VPNDisconnectedColor"
+                case .connecting, .disconnecting:
+                    return "VPNProcessingColor"
+                case .on:
+                    return "VPNConnectedColor"
+            }
         }
     }
     let vpnStatusChangeNotification = NotificationCenter.default
         .publisher(for: Notification.Name(rawValue: kProxyServiceVPNStatusNotification))
-    let serverSelectionNotification = NotificationCenter.default
-        .publisher(for: .ServerSelected)
+    let serverSelectionNotification = NotificationCenter.default.publisher(for: .ServerSelected)
+    let serverPingNotification = NotificationCenter.default.publisher(for: .PingDidComplete)
     var borderWidth: CGFloat = 20
+    var disableConnectionBtn :Bool {
+        return vpnStatus == .connecting || vpnStatus == .disconnecting || loading || !appConstants.isFta || appConstants.daysLeft <= 0
+    }
     var body: some View {
         NavigationView {
+//            NavigationLink(destination: PaymentScreen(onDismiss: {
+//                
+//            }), isActive: $showPayment) { EmptyView() }
             Background(color: Color(UIColor.systemGray6)) {
                 VStack(spacing: 20) {
                     VStack(spacing: 0) {
                         HStack(spacing: 0) {
-                            switch vpnStatus {
-                                case .off:
-                                    Image(systemName: "shield.slash")
-                                    Text("You are not secure!")
-                                        .font(.system(size: 10))
-                                case .connecting, .disconnecting:
-                                    Image(systemName: "shield")
-                                    Text(vpnStatus == .connecting ? "Connecting..." : "Disconnecting...")
-                                        .font(.system(size: 10))
-                                case .on:
-                                    Image(systemName: "shield.lefthalf.filled")
-                                    Text("You are secured now")
-                                        .font(.system(size: 10))
+                            if loading {
+                                Image(systemName: "globe")
+                                Text("Processing")
+                                    .font(.system(size: 10))
+                            } else {
+                                switch vpnStatus {
+                                    case .off:
+                                        Image(systemName: "shield.slash")
+                                        Text("You are not secure!")
+                                            .font(.system(size: 10))
+                                    case .connecting, .disconnecting:
+                                        Image(systemName: "shield")
+                                        Text(vpnStatus == .connecting ? "Connecting..." : "Disconnecting...")
+                                            .font(.system(size: 10))
+                                    case .on:
+                                        Image(systemName: "shield.lefthalf.filled")
+                                        Text("You are secured now")
+                                            .font(.system(size: 10))
+                                }
                             }
                         }
                         .padding(.vertical, 4)
@@ -79,32 +96,16 @@ struct HomePageView: View {
                                         .frame(height: geometry.size.height)
                                 }
                                 Button(action: {
-                                    if currentServer != nil {
-                                        $loading.wrappedValue = true
-                                        Task {
-                                            let sockConfig = await ApiManager.shared.connectToSocks(serverId: currentServer?.id ?? 0, prevServerId: recentServer?.id, prevServerPort: userDefaults.integer(forKey: PreviousPort))
-                                            VPN.switchVPN(ConfigurationHelper.shared.buildProxyConfiguration(
-                                                host: currentServer!.ip,
-                                                port: sockConfig?.port ?? 0,
-                                                authScheme: sockConfig?.method ?? "chacha20-ietf-poly1305",
-//                                                password: "1McDS2yBoJMZPSld"), completion: { err in
-                                                password: sockConfig?.password ?? ""), completion: { err in
-                                                if err == nil {
-                                                    DispatchQueue.main.async {
-                                                        $loading.wrappedValue = false
-                                                    }
-                                                    print("Connected")
-                                                } else {
-                                                    print(err!)
-                                                }
-                                            })
-                                        }
-                                        
+                                    if vpnStatus == .on {
+                                        Manager.sharedManager.stopVPN()
+                                    } else {
+                                        connectionHandling()
                                     }
                                 }) {
                                     ConnectionButton(vpnStatus: $vpnStatus, loading: $loading)
                                 }
                                 .padding(2)
+                                .disabled(disableConnectionBtn)
                                 NavigationLink(destination: LocationsView(isShowing: $showingLocation), isActive: $showingLocation) {
                                     HStack {
                                         if currentServer == nil {
@@ -138,9 +139,25 @@ struct HomePageView: View {
                     .background(LinearGradient(colors: [Color(headerBgColor).opacity(0.2), Color.clear], startPoint: UnitPoint(x: 0, y: 0), endPoint: UnitPoint(x: 0, y: 1)))
                     .padding(0)
                     .cornerRadius(8)
-                    
-                    VStack {
-                        HStack(spacing: 20) {
+                    HStack {
+                        if appConstants.isFta {
+                            if appConstants.daysLeft <= 3 {
+                                Warning(message: appConstants.daysLeft > 0 ? "You have \(appConstants.daysLeft) days before renewal" : "Your Account has been expired.")
+                            }
+                        }else {
+                            Warning(message: "No Active Plan Found", actionText: "Subscribe", action: {
+                                showPayment.toggle()
+                            })
+                        }
+                    }
+//                    .padding(.vertical)
+                    HStack(spacing: 20) {
+                        Button(action: {
+                            let server = currentServer
+                            $currentServer.wrappedValue = fastestServer
+                            $recentServer.wrappedValue = server
+                            connectionHandling()
+                        }) {
                             HStack {
                                 VStack(alignment: .leading) {
                                     Image(systemName: "bolt")
@@ -152,9 +169,18 @@ struct HomePageView: View {
                                 }
                                 Spacer()
                             }
-                            .padding()
-                            .background(Color(UIColor.systemBackground))
-                            .cornerRadius(8)
+                        }
+                        .padding()
+                        .background(Color(UIColor.systemBackground))
+                        .cornerRadius(8)
+                        .contentShape(RoundedRectangle(cornerRadius: 8))
+                        .disabled(fastestServer == nil || disableConnectionBtn)
+                        Button(action: {
+                            let server = currentServer
+                            $currentServer.wrappedValue = recentServer
+                            $recentServer.wrappedValue = server
+                            connectionHandling()
+                        }) {
                             HStack {
                                 VStack(alignment: .leading) {
                                     Image(systemName: "clock.arrow.circlepath")
@@ -166,12 +192,14 @@ struct HomePageView: View {
                                 }
                                 Spacer()
                             }
-                            .padding()
-                            .background(Color(UIColor.systemBackground))
-                            .cornerRadius(8)
                         }
-                        .fixedSize(horizontal: false, vertical: true)
+                        .padding()
+                        .background(Color(UIColor.systemBackground))
+                        .cornerRadius(8)
+                        .contentShape(RoundedRectangle(cornerRadius: 8))
+                        .disabled(recentServer == nil || disableConnectionBtn)
                     }
+                    .fixedSize(horizontal: false, vertical: true)
                     HStack {
                         Image(systemName: "globe.americas")
                         VStack(alignment: .leading) {
@@ -192,7 +220,7 @@ struct HomePageView: View {
                     .cornerRadius(8)
                 }
                 .padding(.horizontal)
-                .navigationBarItems(leading: AppLogo(logoHeight: 24, fontSize: 18, varient: .light))
+                .navigationBarItems(leading: AppLogo(logoHeight: 24, fontSize: 18, variant: .light))
                 .navigationBarItems(trailing: NavigationLink(destination: SettingsScreen()) {
                     Image(systemName: "gear")
                 })
@@ -203,6 +231,10 @@ struct HomePageView: View {
                 .onReceive(serverSelectionNotification) { (notification: Notification) in
                     currentServer = appConstants.selectedServer
                     recentServer = appConstants.recentServer
+                    connectionHandling()
+                }
+                .onReceive(serverPingNotification) { (notification: Notification) in
+                    fastestServer = appConstants.fastestServer()
                 }
                 .onReceive(vpnStatusChangeNotification) { (notification: Notification) in
                     print("VPN Status Changed Notification")
@@ -241,13 +273,18 @@ struct HomePageView: View {
 //                        }
 //                    }
                 }
+                .compatibleFullScreen(isPresented: $showPayment) {
+                    PaymentScreen(onDismiss: {
+                        showPayment.toggle()
+                    })
+                }
             }
         }
         .onAppear(perform: {
             Manager.sharedManager.postMessage()
             vpnStatus = Manager.sharedManager.vpnStatus
             currentServer = appConstants.selectedServer
-            fastestServer = appConstants.fastestServer
+            fastestServer = appConstants.fastestServer()
             recentServer = appConstants.recentServer
             updateLocation()
         })
@@ -262,6 +299,31 @@ struct HomePageView: View {
             $points.wrappedValue = [CoordinateData(id: 0, name: (location?.city ?? (location?.country ?? "")), latitude: location?.latitude ?? 0.0, longitude: location?.longitude ?? 0.0, x: 0, y: 0)]
             $loadingLocation.wrappedValue = false
         })
+    }
+    
+    func connectionHandling() {
+        if currentServer != nil {
+            $loading.wrappedValue = true
+            Task {
+                let sockConfig = await ApiManager.shared.connectToSocks(serverId: currentServer?.id ?? 0, prevServerId: recentServer?.id, prevServerPort: userDefaults.integer(forKey: PreviousPort))
+                VPN.switchVPN(ConfigurationHelper.shared.buildProxyConfiguration(
+                    host: currentServer!.ip,
+                    port: sockConfig?.port ?? 0,
+                    authScheme: sockConfig?.method ?? "chacha20-ietf-poly1305",
+                    //                                                password: "1McDS2yBoJMZPSld"), completion: { err in
+                    password: sockConfig?.password ?? ""), completion: { err in
+                        if err == nil {
+                            DispatchQueue.main.async {
+                                $loading.wrappedValue = false
+                            }
+                            print("Connected")
+                        } else {
+                            print(err!)
+                        }
+                    })
+            }
+            
+        }
     }
 }
 

@@ -1,0 +1,154 @@
+{
+  "identifier" : "BDBF6B7F",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6468386565",
+    "_developerTeamID" : "CSNJWGUP7P",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 719176601.35715604,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21399856",
+      "localizations" : [
+
+      ],
+      "name" : "Premium",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "4.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6469512693",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "VPN Service for 1 Month",
+              "displayName" : "1-Month Plan",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.fonvpn.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "1 Month",
+          "subscriptionGroupID" : "21399856",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "34.99",
+          "familyShareable" : false,
+          "groupNumber" : 3,
+          "internalID" : "6469513245",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "VPN Service Billed Yearly",
+              "displayName" : "12 Month Plan",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.fonvpn.annually",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "12 Months",
+          "subscriptionGroupID" : "21399856",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "14.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "6469513131",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "VPN Service for 3 Months",
+              "displayName" : "3 Month Plan",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.fonvpn.quarterly",
+          "recurringSubscriptionPeriod" : "P3M",
+          "referenceName" : "3 Months",
+          "subscriptionGroupID" : "21399856",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

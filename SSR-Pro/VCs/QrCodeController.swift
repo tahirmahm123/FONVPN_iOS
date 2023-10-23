@@ -95,7 +95,7 @@ extension UIImage {
      */
     func generatePNGRepresentation() -> Data? {
         let newImage = self.copyOriginalImage()
-        let newData = UIImagePNGRepresentation(newImage)
+        let newData = newImage.pngData()
         return newData!
     }
 

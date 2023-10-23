@@ -14,13 +14,17 @@ struct ConnectionButton: View {
     @Binding var loading: Bool
     let radius: CGFloat = 95
     var gradientColors: [Color] {
-        switch vpnStatus {
-            case .off:
-                return [Color("DisconnectedColor1"), Color("DisconnectedColor2")]
-            case .connecting, .disconnecting:
-                return [Color("ProcessingColor1"), Color("ProcessingColor2")]
-            case .on:
-                return [Color("ConnectedColor1"), Color("ConnectedColor2")]
+        if loading {
+            return [Color("ProcessingColor1"), Color("ProcessingColor2")]
+        }else{
+            switch vpnStatus {
+                case .off:
+                    return [Color("DisconnectedColor1"), Color("DisconnectedColor2")]
+                case .connecting, .disconnecting:
+                    return [Color("ProcessingColor1"), Color("ProcessingColor2")]
+                case .on:
+                    return [Color("ConnectedColor1"), Color("ConnectedColor2")]
+            }
         }
     }
     let shadowRadius: CGFloat = 2
@@ -78,11 +82,17 @@ struct ConnectionButton: View {
                                     .foregroundColor(.white)
                                     .font(.system(size: 20).weight(.bold))
                             case .on:
-                                Image(systemName: "power")
+                                Image(systemName: "lock")
                                     .renderingMode(.template)
                                     .resizable().scaledToFit()
                                     .frame(width: 35, height: 35)
                                     .foregroundColor(.white)
+                                Text("Tap to")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 20).weight(.bold))
+                                Text("Disconnect")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 20).weight(.bold))
                         }
                     }
                 }

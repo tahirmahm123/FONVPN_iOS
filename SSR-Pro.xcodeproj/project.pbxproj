@@ -10,6 +10,12 @@
 		0246CBB12AD78A3100BD233A /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246CBB02AD78A3100BD233A /* AppConfiguration.swift */; };
 		0246CBB32AD78D1700BD233A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0246CBB22AD78D1700BD233A /* GoogleService-Info.plist */; };
 		024EA1E72AD84EB4000D06F2 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024EA1E62AD84EB4000D06F2 /* UIColor+Ext.swift */; };
+		024EA2362AD85327000D06F2 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024EA2352AD85327000D06F2 /* AppEnvironment.swift */; };
+		024EA24D2AD9DD5A000D06F2 /* Pods_SSR_Pro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0A552FFF41C1304929205 /* Pods_SSR_Pro.framework */; };
+		024EA24E2AD9DD5A000D06F2 /* Pods_SSR_Pro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0A552FFF41C1304929205 /* Pods_SSR_Pro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		024EA2542ADDC421000D06F2 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024EA2532ADDC421000D06F2 /* ProductManager.swift */; };
+		024EA2562ADDC744000D06F2 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024EA2552ADDC744000D06F2 /* SafariView.swift */; };
+		024EA2582ADDD661000D06F2 /* StoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024EA2572ADDD661000D06F2 /* StoreScreen.swift */; };
 		02787D3D2AD51C0400A87478 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02787D3C2AD51C0400A87478 /* CollectionViewController.swift */; };
 		027A6B5C2AD6A64500FDACCA /* AppLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027A6B5B2AD6A64500FDACCA /* AppLogo.swift */; };
 		027A6B5E2AD6A6C000FDACCA /* Font+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027A6B5D2AD6A6C000FDACCA /* Font+Ext.swift */; };
@@ -175,7 +181,6 @@
 		027ACDCD2AD4FA1600DE65A3 /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027ACDA02AD4FA1600DE65A3 /* AlertUtils.swift */; };
 		027ACDCE2AD4FA1600DE65A3 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027ACDA12AD4FA1600DE65A3 /* Receipt.swift */; };
 		027ACDCF2AD4FA1600DE65A3 /* LoggerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027ACDA22AD4FA1600DE65A3 /* LoggerUtils.swift */; };
-		027ACDD02AD4FA1600DE65A3 /* KeychainUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027ACDA42AD4FA1600DE65A3 /* KeychainUtils.swift */; };
 		027ACDD12AD4FA1600DE65A3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027ACDA52AD4FA1600DE65A3 /* Color.swift */; };
 		027ACDD22AD4FA1600DE65A3 /* QrCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027ACDA62AD4FA1600DE65A3 /* QrCodeController.swift */; };
 		027ACDD32AD4FA1600DE65A3 /* RuleSetConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027ACDA82AD4FA1600DE65A3 /* RuleSetConfigurationViewController.swift */; };
@@ -200,6 +205,8 @@
 		027ACDE62AD4FA1600DE65A3 /* BaseButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027ACDBD2AD4FA1600DE65A3 /* BaseButtonRow.swift */; };
 		027ACDE92AD4FF0B00DE65A3 /* ConfigGroupChooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027ACDE72AD4FF0A00DE65A3 /* ConfigGroupChooseVC.swift */; };
 		027ACDEA2AD4FF0B00DE65A3 /* ConfigGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027ACDE82AD4FF0A00DE65A3 /* ConfigGroupCell.swift */; };
+		027EC9D12AE1499600EEBE01 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027EC9D02AE1499600EEBE01 /* MainVC.swift */; };
+		027EC9EB2AE14D3B00EEBE01 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027EC9EA2AE14D3B00EEBE01 /* Keychain.swift */; };
 		028DC31F2AD6CCD300307928 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC215BA1CB4DAE6002AADD1 /* BaseModel.swift */; };
 		028DC3202AD6CCD300307928 /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC215B81CB4DA9E002AADD1 /* Proxy.swift */; };
 		028DC3212AD6CCD300307928 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC215BC1CB4DE6B002AADD1 /* Rule.swift */; };
@@ -211,6 +218,7 @@
 		028DC3272AD6CE5F00307928 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3034C1CCA20D80096588E /* Logging.swift */; };
 		028DC3282AD6CE5F00307928 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB3F73E1CC60B5300C2DD05 /* Image.swift */; };
 		028DC3292AD6CE5F00307928 /* Pollution.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82574A81D1D98CF007BAF40 /* Pollution.swift */; };
+		02E808F42AE141D0003F8588 /* SimplePingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E808F32AE141D0003F8588 /* SimplePingManager.swift */; };
 		1EB0C477EA830C0F37D5CC4B /* Pods_PacketProcessor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D034D854E529714D03E3944D /* Pods_PacketProcessor.framework */; };
 		1ED659011E05C73100D4BEE3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED659001E05C73100D4BEE3 /* CloudKit.framework */; };
 		1ED659061E05E88C00D4BEE3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED659051E05E88C00D4BEE3 /* GameKit.framework */; };
@@ -233,7 +241,6 @@
 		3ADE7CF9207372B3000F70AA /* yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADE7CF82073729B000F70AA /* yaml.framework */; };
 		3ADE7CFB207372E1000F70AA /* yaml.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADE7CF82073729B000F70AA /* yaml.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3ADE7D002073733D000F70AA /* yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADE7CF82073729B000F70AA /* yaml.framework */; };
-		790F6589DBEFA4E8D78902AF /* Pods_SSR_Pro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0A552FFF41C1304929205 /* Pods_SSR_Pro.framework */; };
 		9B0CFA0F1C1C0B1B007BD7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0CFA0E1C1C0B1B007BD7C6 /* AppDelegate.swift */; };
 		9B0CFA161C1C0B1B007BD7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0CFA151C1C0B1B007BD7C6 /* Assets.xcassets */; };
 		9B1F745E1C2F83AD0028C1A6 /* AppConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B1F745D1C2F83AD0028C1A6 /* AppConfig.plist */; };
@@ -525,6 +532,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				024EA24E2AD9DD5A000D06F2 /* Pods_SSR_Pro.framework in Embed Frameworks */,
 				B6D82A3929F4F8AD0036E3DB /* overtls.framework in Embed Frameworks */,
 				B670FD5F2800244000054553 /* libmaxminddb.framework in Embed Frameworks */,
 				3A104BD42073C5D900C848D5 /* mbedtls.framework in Embed Frameworks */,
@@ -546,6 +554,12 @@
 		0246CBB02AD78A3100BD233A /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		0246CBB22AD78D1700BD233A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		024EA1E62AD84EB4000D06F2 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		024EA2352AD85327000D06F2 /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppEnvironment.swift; path = ../../iShadowsocksR/iShadowsocksR/AppEnvironment.swift; sourceTree = "<group>"; };
+		024EA24F2AD9DE3D000D06F2 /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		024EA2522ADDC391000D06F2 /* FakeStore.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = FakeStore.storekit; sourceTree = "<group>"; };
+		024EA2532ADDC421000D06F2 /* ProductManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
+		024EA2552ADDC744000D06F2 /* SafariView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		024EA2572ADDD661000D06F2 /* StoreScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreScreen.swift; sourceTree = "<group>"; };
 		02787D3C2AD51C0400A87478 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		027A6B5B2AD6A64500FDACCA /* AppLogo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLogo.swift; sourceTree = "<group>"; };
 		027A6B5D2AD6A6C000FDACCA /* Font+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Ext.swift"; sourceTree = "<group>"; };
@@ -711,7 +725,6 @@
 		027ACDA12AD4FA1600DE65A3 /* Receipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		027ACDA22AD4FA1600DE65A3 /* LoggerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerUtils.swift; sourceTree = "<group>"; };
 		027ACDA32AD4FA1600DE65A3 /* Receipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Receipt.h; sourceTree = "<group>"; };
-		027ACDA42AD4FA1600DE65A3 /* KeychainUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainUtils.swift; sourceTree = "<group>"; };
 		027ACDA52AD4FA1600DE65A3 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		027ACDA62AD4FA1600DE65A3 /* QrCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeController.swift; sourceTree = "<group>"; };
 		027ACDA82AD4FA1600DE65A3 /* RuleSetConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleSetConfigurationViewController.swift; sourceTree = "<group>"; };
@@ -736,6 +749,9 @@
 		027ACDBD2AD4FA1600DE65A3 /* BaseButtonRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButtonRow.swift; sourceTree = "<group>"; };
 		027ACDE72AD4FF0A00DE65A3 /* ConfigGroupChooseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigGroupChooseVC.swift; sourceTree = "<group>"; };
 		027ACDE82AD4FF0A00DE65A3 /* ConfigGroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigGroupCell.swift; sourceTree = "<group>"; };
+		027EC9D02AE1499600EEBE01 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		027EC9EA2AE14D3B00EEBE01 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		02E808F32AE141D0003F8588 /* SimplePingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePingManager.swift; sourceTree = "<group>"; };
 		185DEA4D48EC78138A5B14EA /* Pods-iShadowsocksR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iShadowsocksR.release.xcconfig"; path = "Pods/Target Support Files/Pods-iShadowsocksR/Pods-iShadowsocksR.release.xcconfig"; sourceTree = "<group>"; };
 		1ECA215E1E05E8C700B32187 /* SSR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SSR.entitlements; sourceTree = "<group>"; };
 		1ECA21631E05EA6D00B32187 /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
@@ -1246,6 +1262,7 @@
 			files = (
 				028DC3252AD6CE1D00307928 /* libxml2.tbd in Frameworks */,
 				B86B08ED1D17FB9B00613014 /* ShadowPath.framework in Frameworks */,
+				024EA24D2AD9DD5A000D06F2 /* Pods_SSR_Pro.framework in Frameworks */,
 				1EEBB8771FFFD4B500EB33C3 /* NetworkExtension.framework in Frameworks */,
 				9BC600241CB2921C00E5EA61 /* CommUtils.framework in Frameworks */,
 				9BDA62621CAE2576007F2581 /* PacketProcessor.framework in Frameworks */,
@@ -1256,7 +1273,6 @@
 				3ADE7CF9207372B3000F70AA /* yaml.framework in Frameworks */,
 				027ACCD82AD4F55100DE65A3 /* FirebaseCrashlytics in Frameworks */,
 				3A09F9022310280E0073E0EE /* ssrNative.framework in Frameworks */,
-				790F6589DBEFA4E8D78902AF /* Pods_SSR_Pro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1324,6 +1340,8 @@
 			children = (
 				027ACB812AD4EAA000DE65A3 /* LaunchScreen */,
 				027ACB822AD4EAA000DE65A3 /* UI */,
+				027ACBBB2AD4EAA000DE65A3 /* MainRootView.swift */,
+				027ACB892AD4EAA000DE65A3 /* TestView.swift */,
 				027ACBCD2AD4EAA000DE65A3 /* LaunchScreen.xcstrings */,
 				027ACBCF2AD4EAA000DE65A3 /* LaunchScreen.storyboard */,
 				027ACBD12AD4EAA000DE65A3 /* Main.storyboard */,
@@ -1344,11 +1362,9 @@
 			isa = PBXGroup;
 			children = (
 				027ACB832AD4EAA000DE65A3 /* Navigation */,
-				027ACB892AD4EAA000DE65A3 /* TestView.swift */,
 				027ACB8A2AD4EAA000DE65A3 /* Extensions */,
 				027ACB8E2AD4EAA000DE65A3 /* Components */,
 				027ACBB32AD4EAA000DE65A3 /* Locations */,
-				027ACBBB2AD4EAA000DE65A3 /* MainRootView.swift */,
 				027ACBBC2AD4EAA000DE65A3 /* Pages */,
 				027ACBCB2AD4EAA000DE65A3 /* Partials */,
 			);
@@ -1386,6 +1402,7 @@
 				027A6B5B2AD6A64500FDACCA /* AppLogo.swift */,
 				027ACB9D2AD4EAA000DE65A3 /* ConnectingStateButton.swift */,
 				027ACB9E2AD4EAA000DE65A3 /* MapWithCoordinates.swift */,
+				024EA2552ADDC744000D06F2 /* SafariView.swift */,
 				027ACB9F2AD4EAA000DE65A3 /* PasswordValidation.swift */,
 				027ACBA42AD4EAA000DE65A3 /* Background.swift */,
 				027ACBA52AD4EAA000DE65A3 /* PaymentCell.swift */,
@@ -1466,8 +1483,8 @@
 		027ACBB32AD4EAA000DE65A3 /* Locations */ = {
 			isa = PBXGroup;
 			children = (
-				027ACBB42AD4EAA000DE65A3 /* LocationTableView.swift */,
 				027ACBB52AD4EAA000DE65A3 /* Components */,
+				027ACBB42AD4EAA000DE65A3 /* LocationTableView.swift */,
 				027ACBB82AD4EAA000DE65A3 /* LocationTableVC.swift */,
 				027ACBB92AD4EAA000DE65A3 /* SearchControllerWrapper.swift */,
 				027ACBBA2AD4EAA000DE65A3 /* FavouritesLocationView.swift */,
@@ -1487,8 +1504,8 @@
 		027ACBBC2AD4EAA000DE65A3 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				027ACBBD2AD4EAA000DE65A3 /* SettingsScreen.swift */,
 				027ACBBE2AD4EAA000DE65A3 /* Auth */,
+				027ACBBD2AD4EAA000DE65A3 /* SettingsScreen.swift */,
 				027ACBC22AD4EAA000DE65A3 /* LocationsView.swift */,
 				027ACBC32AD4EAA000DE65A3 /* ConnectionSettingsScreen.swift */,
 				027ACBC42AD4EAA000DE65A3 /* PaymentScreen.swift */,
@@ -1498,6 +1515,7 @@
 				027ACBC82AD4EAA000DE65A3 /* ActiveDevicesView.swift */,
 				027ACBC92AD4EAA000DE65A3 /* AccountSettingsScreen.swift */,
 				027ACBCA2AD4EAA000DE65A3 /* HomePageView.swift */,
+				024EA2572ADDD661000D06F2 /* StoreScreen.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -1560,6 +1578,7 @@
 				027ACD1B2AD4F7B700DE65A3 /* DisplayUtility.swift */,
 				027ACD1C2AD4F7B700DE65A3 /* Action.swift */,
 				027ACD202AD4F7B700DE65A3 /* SimplePingClient.swift */,
+				027EC9EA2AE14D3B00EEBE01 /* Keychain.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -1643,6 +1662,8 @@
 		027ACD382AD4F7B800DE65A3 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				02E808F32AE141D0003F8588 /* SimplePingManager.swift */,
+				024EA2532ADDC421000D06F2 /* ProductManager.swift */,
 				027ACD392AD4F7B800DE65A3 /* InternetManager.swift */,
 				027ACD3A2AD4F7B800DE65A3 /* SimplePing.h */,
 				027ACD3B2AD4F7B800DE65A3 /* IAPManager.swift */,
@@ -1684,6 +1705,7 @@
 				027ACDB52AD4FA1600DE65A3 /* RequestOverviewVC.swift */,
 				027ACDB62AD4FA1600DE65A3 /* RequestModel.swift */,
 				027ACDB72AD4FA1600DE65A3 /* Base */,
+				027EC9D02AE1499600EEBE01 /* MainVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -1714,7 +1736,6 @@
 				027ACDA12AD4FA1600DE65A3 /* Receipt.swift */,
 				027ACDA22AD4FA1600DE65A3 /* LoggerUtils.swift */,
 				027ACDA32AD4FA1600DE65A3 /* Receipt.h */,
-				027ACDA42AD4FA1600DE65A3 /* KeychainUtils.swift */,
 				027ACDA52AD4FA1600DE65A3 /* Color.swift */,
 			);
 			path = Utils;
@@ -1858,6 +1879,7 @@
 				9BC8589F1C33B00200992032 /* SSR-Bridge-Header.h */,
 				0246CBB02AD78A3100BD233A /* AppConfiguration.swift */,
 				9B0CFA0E1C1C0B1B007BD7C6 /* AppDelegate.swift */,
+				024EA2352AD85327000D06F2 /* AppEnvironment.swift */,
 				9B1F745F1C2F84250028C1A6 /* AppInitializer.swift */,
 				B87A72B31D433ACA006C2A1B /* NotificationHandler.swift */,
 				9B2290FE1C8E5B9600EEC901 /* DataInitializer.swift */,
@@ -1869,6 +1891,7 @@
 				9B0CFA151C1C0B1B007BD7C6 /* Assets.xcassets */,
 				9B0CFA1A1C1C0B1B007BD7C6 /* Info.plist */,
 				B8319A0F1D1BD696001E50C2 /* Localizable.strings */,
+				024EA2522ADDC391000D06F2 /* FakeStore.storekit */,
 			);
 			path = "SSR-Pro";
 			sourceTree = "<group>";
@@ -2647,6 +2670,7 @@
 		C8B2149E8757C44C469576D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				024EA24F2AD9DE3D000D06F2 /* Eureka.framework */,
 				3A8780CA20754B2000B96BF3 /* libxml2.tbd */,
 				1EEBB8761FFFD4B500EB33C3 /* NetworkExtension.framework */,
 				1ED659051E05E88C00D4BEE3 /* GameKit.framework */,
@@ -2795,7 +2819,7 @@
 				TargetAttributes = {
 					9B0CFA0A1C1C0B1A007BD7C6 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1500;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -3226,8 +3250,11 @@
 				027ACC372AD4EAA100DE65A3 /* PasswordValidation.swift in Sources */,
 				027ACDE12AD4FA1600DE65A3 /* BaseSafariViewController.swift in Sources */,
 				027ACC4E2AD4EAA100DE65A3 /* SearchControllerWrapper.swift in Sources */,
+				027EC9D12AE1499600EEBE01 /* MainVC.swift in Sources */,
+				02E808F42AE141D0003F8588 /* SimplePingManager.swift in Sources */,
 				027ACC5A2AD4EAA100DE65A3 /* NotificationScreen.swift in Sources */,
 				027ACC4B2AD4EAA100DE65A3 /* RandomFastestView.swift in Sources */,
+				027EC9EB2AE14D3B00EEBE01 /* Keychain.swift in Sources */,
 				027ACD532AD4F7B800DE65A3 /* UIApplication+Ext.swift in Sources */,
 				027ACD4A2AD4F7B800DE65A3 /* AppDataTypes.swift in Sources */,
 				027ACC2E2AD4EAA100DE65A3 /* ScrollViewBackgroundReader.swift in Sources */,
@@ -3257,12 +3284,14 @@
 				027ACC3B2AD4EAA100DE65A3 /* Background.swift in Sources */,
 				027ACC1E2AD4EAA000DE65A3 /* CoordinatesFinder.swift in Sources */,
 				027ACD692AD4F7B800DE65A3 /* Interface.swift in Sources */,
+				024EA2562ADDC744000D06F2 /* SafariView.swift in Sources */,
 				027ACD722AD4F7B800DE65A3 /* RenewModel.swift in Sources */,
 				027ACDDE2AD4FA1600DE65A3 /* HomePresenter.swift in Sources */,
 				027ACC302AD4EAA100DE65A3 /* ScrollAnchor.swift in Sources */,
 				027ACD512AD4F7B800DE65A3 /* CALayer+Ext.swift in Sources */,
 				027ACDE22AD4FA1600DE65A3 /* BaseEmptyView.swift in Sources */,
 				027ACD762AD4F7B800DE65A3 /* CertificateModel.swift in Sources */,
+				024EA2582ADDD661000D06F2 /* StoreScreen.swift in Sources */,
 				027ACD682AD4F7B800DE65A3 /* CIDRAddress.swift in Sources */,
 				027ACD8A2AD4F7B900DE65A3 /* SimplePing.m in Sources */,
 				027ACD612AD4F7B800DE65A3 /* UserDefaults+Ext.swift in Sources */,
@@ -3309,8 +3338,8 @@
 				027ACC432AD4EAA100DE65A3 /* RoundedCorners.swift in Sources */,
 				027ACC4F2AD4EAA100DE65A3 /* FavouritesLocationView.swift in Sources */,
 				027ACD482AD4F7B800DE65A3 /* ReachabilityInternet.swift in Sources */,
+				024EA2542ADDC421000D06F2 /* ProductManager.swift in Sources */,
 				027ACDD72AD4FA1600DE65A3 /* PaddingLabel.swift in Sources */,
-				027ACDD02AD4FA1600DE65A3 /* KeychainUtils.swift in Sources */,
 				027ACC322AD4EAA100DE65A3 /* PageControl.swift in Sources */,
 				027ACDC82AD4FA1600DE65A3 /* Receipt.m in Sources */,
 				027ACD4C2AD4F7B800DE65A3 /* StoreObserver.swift in Sources */,
@@ -3410,6 +3439,7 @@
 				027ACDE32AD4FA1600DE65A3 /* SegmentPageVC.swift in Sources */,
 				027ACD862AD4F7B800DE65A3 /* ApiManager.swift in Sources */,
 				027ACD472AD4F7B800DE65A3 /* DNSProtocolType.swift in Sources */,
+				024EA2362AD85327000D06F2 /* AppEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3701,12 +3731,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 45920930430A8788C0322F7C /* Pods-SSR-Pro.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SSR-Pro/SSR.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = CSNJWGUP7P;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3727,12 +3757,15 @@
 					"\"${PODS_ROOT}/Headers/Public\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SSR-Pro/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FON VPN";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@rpath/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fonvpn.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3740,7 +3773,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SSR-Pro/SSR-Bridge-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -3750,12 +3783,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DC86CAD5573282FC0E42D8F1 /* Pods-SSR-Pro.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SSR-Pro/SSR.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CSNJWGUP7P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3775,19 +3808,22 @@
 					"\"${PODS_ROOT}/Headers/Public\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SSR-Pro/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FON VPN";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@rpath/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fonvpn.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SSR-Pro/SSR-Bridge-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 			};

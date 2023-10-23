@@ -167,7 +167,6 @@ struct FavouritesLocationsWrapper: UIViewControllerRepresentable {
             if tableView.cellForRow(at: indexPath) is ServerRowCell{
                 let serverDetails = self.serversList![indexPath.section]
                 userDefaults.set(serverDetails.id, forKey: LastSelectedServer)
-                BackButtonTapped = false
             }
             onServerSelection()
             tableView.deselectRow(at: indexPath, animated: false)

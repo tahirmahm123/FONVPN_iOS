@@ -76,6 +76,7 @@ class UIManager: NSObject, AppLifeCycleProtocol {
     func makeRootViewController() -> UINavigationController {
         let vc = UINavigationController()
         vc.navigationBar.isHidden = true
+//        vc.setViewControllers([MainViewController.vc()], animated: false)
         vc.setViewControllers([SplashController.vc()], animated: false)
         return vc
     }

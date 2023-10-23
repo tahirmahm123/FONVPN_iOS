@@ -1,9 +1,9 @@
-//
-//  UrlHandler.swift
-//
-//  Created by LEI on 4/13/16.
-//  Copyright © 2016 TouchingApp. All rights reserved.
-//
+    //
+    //  UrlHandler.swift
+    //
+    //  Created by LEI on 4/13/16.
+    //  Copyright © 2016 TouchingApp. All rights reserved.
+    //
 
 import Foundation
 import Async
@@ -32,7 +32,7 @@ class UrlHandler: NSObject, AppLifeCycleProtocol {
         return true
     }
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
         let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         var parameters: Parameters = [:]
         components?.queryItems?.forEach {
@@ -47,51 +47,91 @@ class UrlHandler: NSObject, AppLifeCycleProtocol {
         return false
     }
     
+    func application(_ application: UIApplication,
+                     continue userActivity: NSUserActivity,
+                     restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool
+    {
+          // Get URL components from the incoming user activity.
+      guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+            let incomingURL = userActivity.webpageURL,
+            let components = NSURLComponents(url: incomingURL, resolvingAgainstBaseURL: true) else {
+          return false
+      }
+      
+      
+          // Check for specific URL components that you need.
+      guard let path = components.path else {
+          return false
+      }
+      print("path = \(path)")
+      var parameters: Parameters = [:]
+      components.queryItems?.forEach {
+          guard let _ = $0.value else {
+              return
+          }
+          parameters[$0.name] = $0.value
+      }
+      if path.contains("mobile-auth.php") {
+          if userDefaults.bool(forKey: isLogedIn) {
+              return self.dispatchAction(incomingURL, actionString: path, parameters: parameters)
+          } else {
+              return false
+          }
+      }
+      return false
+    }
+    
     func dispatchAction(_ url: URL?, actionString: String, parameters: Parameters) -> Bool {
         guard let action = URLAction(rawValue: actionString) else {
             return false
         }
         return action.perform(url, parameters: parameters)
     }
-
+    
 }
 
 enum URLAction: String {
-
+    
     case ON = "on"
     case OFF = "off"
     case SWITCH = "switch"
+    case LOGIN = "authToken"
+    case AUTH = "/mobile-auth.php"
     case XCALLBACK = "x-callback-url"
-
+    
     @discardableResult
     func perform(_ url: URL?, parameters: Parameters, completion: ((Error?) -> Void)? = nil) -> Bool {
         switch self {
-        case .ON:
-            Manager.sharedManager.startVPN(nil) { (manager, error) in
-                if error == nil {
-                    self.autoClose(parameters)
+            case .ON:
+                Manager.sharedManager.startVPN(nil) { (manager, error) in
+                    if error == nil {
+                        self.autoClose(parameters)
+                    }
+                    completion?(error)
                 }
-                completion?(error)
-            }
-        case .OFF:
-            Manager.sharedManager.stopVPN()
-            autoClose(parameters)
-            completion?(nil)
-        case .SWITCH:
-            Manager.sharedManager.switchVPN({ (manager, error) in
-                if error == nil {
-                    self.autoClose(parameters)
+            case .OFF:
+                Manager.sharedManager.stopVPN()
+                autoClose(parameters)
+                completion?(nil)
+            case .SWITCH:
+                Manager.sharedManager.switchVPN({ (manager, error) in
+                    if error == nil {
+                        self.autoClose(parameters)
+                    }
+                    completion?(error)
+                })
+            case .LOGIN, .AUTH:
+                if let value = parameters["token"],!userDefaults.bool(forKey: isLogedIn){
+                    userDefaults.setValue(value, forKey: urlAuthToken)
                 }
-                completion?(error)
-            })
-        case .XCALLBACK:
-            if let url = url {
-                return callbackURLKit_Manager.shared.handleOpen(url: url)
-            }
+            case .XCALLBACK:
+                if let url = url {
+                    return callbackURLKit_Manager.shared.handleOpen(url: url)
+                }
         }
         return true
     }
-
+    
     func autoClose(_ parameters: Parameters) {
         var autoclose = false
         if let value = parameters["autoclose"], value.lowercased() == "true" || value.lowercased() == "1" {
@@ -103,5 +143,4 @@ enum URLAction: String {
             })
         }
     }
-
 }

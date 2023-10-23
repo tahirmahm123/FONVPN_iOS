@@ -21,7 +21,7 @@ class ApiManager {
     var plansIdentifier : [String]?
     var currentLocation : LocationModel?
     var serverFetchedFromFile = false
-    
+    let pinger = SimplePingManager()
     func verifyUser(userName: String, password : String) async -> (Bool,Bool, Bool, Bool, Bool) {
         let params = [
             "username" : userName,
@@ -374,7 +374,7 @@ class ApiManager {
     }
 
     func assignPing(servers: [Servers]? , count: Int , currentIndex: Int = 0){
-        if vpnStatus == .connected {
+        if vpnStatus == .on {
             return
         }
         
@@ -384,7 +384,7 @@ class ApiManager {
             return
         }
         if let server = servers?[currentIndex]{
-            SimplePingClient.ping(hostname: server.ip ) { result in
+            SimplePingClient.ping(hostname: "8.8.8.8" ) { result in
                 switch result {
                     case .success(let latency):
                         print("Detail : \(latency)")
@@ -683,37 +683,35 @@ class ApiManager {
 //                    }
 //                })
 //        }
-        self.assignPing(servers: self.serversList, count: self.serversList?.count ?? 0 )
+        DispatchQueue.main.async {
+            self.assignPing(servers: self.serversList, count: self.serversList?.count ?? 0 )
+        }
         self.groupedServersList = serversData.servers
         if userDefaults.integer(forKey: LastSelectedServer) == 0 {
             userDefaults.set(self.groupedServersByCountry?.first?.servers?.first?.id, forKey: LastSelectedServer)
         }
     }
     
-    func fetchPlans(completion: @escaping (Bool) -> ()) {
+    func fetchPlans() async -> [String] {
         let headers: HTTPHeaders = [
             .authorization(bearerToken: userDefaults.string(forKey: ApiKey) ?? "")
         ]
-        AF.request(apiBaseURL + "/v2/plans?platform=ios", headers: headers).responseDecodable(of: PlansModel.self) { response in
-            switch response.result {
-                case .success:
-                    if let data = response.data {
-                        do {
-                            let plansData = try JSONDecoder().decode(PlansModel.self, from: data)
-                            self.plansData = plansData.plans
-                            self.plansIdentifier = plansData.plans!.map { $0.identifier! }
-                            
-                            
-                            completion(true)
-                        } catch {
-                            print("Error: \(error)")
-                            completion(false)
-                        }
-                    }
-                case.failure(let error):
-                    print(error)
-                    completion(false)
-            }
+        let task = AF.request(apiBaseURL + "/v2/plans?platform=ios", headers: headers).serializingDecodable(PlansModel.self)
+        let result = await task.result
+        switch result {
+            case .success:
+                do {
+                    let data = try await task.value
+                    self.plansData = data.plans
+                    self.plansIdentifier = data.plans!.map { $0.identifier! }
+                    return self.plansIdentifier ?? []
+                } catch {
+                    print("Error: \(error)")
+                    return self.plansIdentifier ?? []
+                }
+            case.failure(let error):
+                print(error)
+                return []
         }
     }
     

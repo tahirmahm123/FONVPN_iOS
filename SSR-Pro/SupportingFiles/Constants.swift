@@ -14,8 +14,8 @@ let appName = "FON VPN"
 let appName1 = "FON"
 let appName2 = "VPN"
 let supportEmail = "support@fonvpn.com"
-let AcceptTermsURL = ""
-let PrivacyPolicyURL = ""
+let AcceptTermsURL = "https://www.fonvpn.com/tos.php?mobileview=true"
+let PrivacyPolicyURL = "https://www.fonvpn.com/privacy-policy.php?mobileview=true"
 let configurationKeyRevnueCat = ""
 
 let urlAuthToken = "urlAuthToken"
@@ -71,26 +71,8 @@ let appGroup = "group.com.app.vpnlighting"
 let apiBaseDomain = "api.fonvpn.com"
 let apiBaseURL = "https://"+apiBaseDomain
 
-
-var BackButtonTapped = false
-var vpnStatus: NEVPNStatus = .disconnected
-var neConnectStatus: NEVPNStatus {
-    let status = NEVPNManager.shared().connection.status
-    switch status {
-        case NEVPNStatus.invalid, NEVPNStatus.disconnected, NEVPNStatus.reasserting:
-            return .disconnected
-        case NEVPNStatus.connecting:
-            return .connecting
-        case NEVPNStatus.connected:
-            return .connected
-        case NEVPNStatus.disconnecting:
-            return .disconnecting
-        @unknown default:
-            return .disconnected
-    }
-}
-var vpnManager = NEVPNManager.shared()
-//let keychain = Keychain(group: appGroup)
+var vpnStatus: VPNStatus = .off
+let keychain = Keychain(service: Bundle.main.bundleIdentifier!)
 let RecommendedIndex = "recommendedIndex"
 let TimeInterval = "timeInterval"
 let LastTimeSaved = "LastTimeSave"
@@ -100,7 +82,6 @@ let DefaultDns2 = "defaultdns2"
 
 let ServerFilePath = "ServersFilePath"
 let ServerFileName = "servers.json"
-var InterfaceForKey = Interface()
 extension Notification.Name {
     public static let ShouestLoader = Notification.Name("shouestLoader")
     public static let ShouestError = Notification.Name("shouestError")
@@ -124,5 +105,6 @@ extension Notification.Name {
     public static let ShowGuestError = Notification.Name("showGuestError")
     public static let StartSearching = Notification.Name("StartSearching")
     public static let LoginActionWithUrl = Notification.Name("LoginActionWithUrl")
+    public static let RedirectToRoot = Notification.Name("RedirectToRoot")
 }
 

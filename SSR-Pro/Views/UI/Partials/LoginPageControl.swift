@@ -20,8 +20,8 @@ struct LoginPageControl: View {
         "Power of Secure Encryption"
     ]
     var subTitle = [
-        "Protect your data and access restricted content with VIS VPN. Experience fast, reliable, and secure browsing on all your devices.",
-        "Seamlessly access geo-restricted streaming services and unlock a world of entertainment with VIS VPN.",
+        "Protect your data and access restricted content with \(appName). Experience fast, reliable, and secure browsing on all your devices.",
+        "Seamlessly access geo-restricted streaming services and unlock a world of entertainment with \(appName).",
         "Safeguard your online activities and protect your sensitive data with our state-of-the-art encryption protocols."
     ]
     var body: some View {

@@ -11,17 +11,17 @@ struct SettingsScreen: View {
     @State private var detailsShown = false
     var body: some View {
         List{
-            NavigationLink(destination: ConnectionSettingsScreen()
-            ) {
-                VStack(alignment: .leading) {
-                    Text("Connection Settings")
-                        .foregroundColor(Color(UIColor.label))
-                    Text("Auto connect and security")
-                        .font(.subheadline)
-                        .foregroundColor(Color("FadedColor"))
-                    
-                }
-            }
+//            NavigationLink(destination: ConnectionSettingsScreen()
+//            ) {
+//                VStack(alignment: .leading) {
+//                    Text("Connection Settings")
+//                        .foregroundColor(Color(UIColor.label))
+//                    Text("Auto connect and security")
+//                        .font(.subheadline)
+//                        .foregroundColor(Color("FadedColor"))
+//                    
+//                }
+//            }
             NavigationLink(destination: AccountSettingsScreen()) {
                 VStack(alignment: .leading) {
                     Text("My Account")
@@ -44,7 +44,7 @@ struct SettingsScreen: View {
                 }
             }
         }
-        .listStyle(.plain)
+//        .listStyle(.plain)
         .navigationBarTitle("Settings", displayMode: .large)
         .sheet(isPresented: $detailsShown) {
             NotificationDetailsScreen(onDismiss: {

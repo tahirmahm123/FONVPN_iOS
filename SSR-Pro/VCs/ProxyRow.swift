@@ -36,7 +36,7 @@ class ProxyNodeRowCell: Cell<ProxyNode>, CellType {
 
     let group = ConstraintGroup()
 
-    required init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    required init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
     }

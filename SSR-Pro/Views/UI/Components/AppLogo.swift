@@ -14,7 +14,7 @@ struct AppLogo: View {
     @EnvironmentObject var appConstants: AppConstants
     var logoHeight: CGFloat = 40
     var fontSize: CGFloat = 28
-    var varient: AppLogoVarient = .dark
+    var variant: AppLogoVarient = .dark
     var body: some View {
         HStack(spacing: 3) {
             Image("SplashLogo")
@@ -26,7 +26,7 @@ struct AppLogo: View {
                 .foregroundStyle(LinearGradient(gradient: Gradient(colors:  appConstants.gradientColors), startPoint: .leading, endPoint: .trailing))
             Text(appName2)
                 .font(Font.logoFont(size: fontSize))
-                .foregroundStyle(varient == .light ? Color.black : Color.white)
+                .foregroundStyle(variant == .light ? Color.black : Color.white)
         }
     }
 }

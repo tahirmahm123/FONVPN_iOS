@@ -101,14 +101,14 @@ struct MapWithCoordinates: UIViewRepresentable {
             return newCoordinate
         }
         switch (vpnStatus) {
-            case .connected, .connecting:
+            case .on, .connecting:
                 UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                 let serverId = userDefaults.integer(forKey: LastSelectedServer)
                 NotificationCenter.default.post(name: .FocusOnMap, object: nil, userInfo: ["id": serverId])
-            case .disconnected, .disconnecting, .invalid, .reasserting:
+            case .off, .disconnecting:
                 NotificationCenter.default.post(name: .FocusOnMap, object: nil, userInfo: ["id": 0])
-            @unknown default:
-                NotificationCenter.default.post(name: .FocusOnMap, object: nil, userInfo: ["id": 0])
+//            @unknown default:
+//                NotificationCenter.default.post(name: .FocusOnMap, object: nil, userInfo: ["id": 0])
         }
     }
     

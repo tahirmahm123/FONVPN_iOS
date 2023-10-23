@@ -16,7 +16,6 @@ target "SSR-Pro" do
     pod 'ICDMaterialActivityIndicatorView', '~> 0.1.0'
     pod 'MMWormhole'
     pod 'Eureka'
-    pod 'KeychainAccess', '~> 3.1.1'
     pod 'RealmSwift'
     pod 'CallbackURLKit'
     pod 'CocoaAsyncSocket'
@@ -32,15 +31,6 @@ end
 target "PacketProcessor" do
   pod 'CocoaAsyncSocket'
 end
-
-#target "PotatsoLibrary" do
-#    library
-#    model
-#end
-#
-#target "PotatsoModel" do
-#    model
-#end
 
 post_install do |installer|
     installer.generated_projects.each do |project|
