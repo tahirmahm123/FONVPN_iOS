@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSString (Localize)
+@interface NSString (AppLocalize)
 - (NSString *) localized;
 + (NSString *) stringLocalizedFormat:(NSString *)format, ...;
 + (NSString *) stringLocalizedPlural:(NSString *)format, ...;
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 static NSString *const LCLLanguageChangeNotification = @"LCLLanguageChangeNotification";
 
-@interface Localize : NSObject
+@interface AppLocalize : NSObject
 @property(nonatomic, strong, class, readonly) NSArray<NSString *> * availableLanguages;
 @property(nonatomic, strong, class) NSString * currentLanguage;
 @property(nonatomic, strong, class, readonly) NSString * defaultLanguage;

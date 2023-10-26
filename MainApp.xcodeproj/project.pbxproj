@@ -752,6 +752,11 @@
 		027EC9D02AE1499600EEBE01 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		027EC9EA2AE14D3B00EEBE01 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		02E808F32AE141D0003F8588 /* SimplePingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePingManager.swift; sourceTree = "<group>"; };
+		02F972862AEAD2C90002A52A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		02F9728D2AEAD2F30002A52A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		02F972932AEAD30D0002A52A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		02F972992AEAD3150002A52A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		02F9729F2AEAD52F0002A52A /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/Localizable.xcstrings; sourceTree = "<group>"; };
 		185DEA4D48EC78138A5B14EA /* Pods-iShadowsocksR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iShadowsocksR.release.xcconfig"; path = "Pods/Target Support Files/Pods-iShadowsocksR/Pods-iShadowsocksR.release.xcconfig"; sourceTree = "<group>"; };
 		1ECA215E1E05E8C700B32187 /* AppSign.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppSign.entitlements; sourceTree = "<group>"; };
 		1ECA21631E05EA6D00B32187 /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
@@ -1239,8 +1244,6 @@
 		B6D3435C28001EBD00527D6D /* libmaxminddb.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libmaxminddb.xcodeproj; path = Library/libmaxminddb/xcode/libmaxminddb.xcodeproj; sourceTree = "<group>"; };
 		B6D82A1A29F4F3820036E3DB /* overtls.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = overtls.xcodeproj; path = overtls/overtls.xcodeproj; sourceTree = "<group>"; };
 		B82574A81D1D98CF007BAF40 /* Pollution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pollution.swift; sourceTree = "<group>"; };
-		B8319A0E1D1BD696001E50C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B8319A101D1BD699001E50C2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B86B08E31D17F84900613014 /* ShadowPath.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShadowPath.xcodeproj; path = Library/ShadowPath/ShadowPath.xcodeproj; sourceTree = SOURCE_ROOT; };
 		B87A72B31D433ACA006C2A1B /* NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		B8CF2F991D3DF69E009C9FF3 /* Confidential.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Confidential.h; sourceTree = "<group>"; };
@@ -1338,7 +1341,6 @@
 		027ACB802AD4EAA000DE65A3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				027ACB812AD4EAA000DE65A3 /* LaunchScreen */,
 				027ACB822AD4EAA000DE65A3 /* UI */,
 				027ACBBB2AD4EAA000DE65A3 /* MainRootView.swift */,
 				027ACB892AD4EAA000DE65A3 /* TestView.swift */,
@@ -1349,13 +1351,6 @@
 				027ACBD32AD4EAA000DE65A3 /* StoryboardComponents */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		027ACB812AD4EAA000DE65A3 /* LaunchScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 		027ACB822AD4EAA000DE65A3 /* UI */ = {
@@ -2884,6 +2879,10 @@
 				Base,
 				"zh-Hans",
 				en,
+				ru,
+				es,
+				ar,
+				de,
 			);
 			mainGroup = 9B0CFA021C1C0B1A007BD7C6;
 			packageReferences = (
@@ -3594,6 +3593,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				027ACBD02AD4EAA000DE65A3 /* Base */,
+				02F972862AEAD2C90002A52A /* ru */,
+				02F9728D2AEAD2F30002A52A /* es */,
+				02F972932AEAD30D0002A52A /* ar */,
+				02F972992AEAD3150002A52A /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -3601,8 +3604,7 @@
 		B8319A0F1D1BD696001E50C2 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B8319A0E1D1BD696001E50C2 /* Base */,
-				B8319A101D1BD699001E50C2 /* zh-Hans */,
+				02F9729F2AEAD52F0002A52A /* mul */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -3742,7 +3744,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/PotatsoLibrary",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -3771,6 +3772,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "MainApp/App-Bridge-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
@@ -3793,7 +3795,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/PotatsoLibrary",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -3821,6 +3822,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "MainApp/App-Bridge-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;

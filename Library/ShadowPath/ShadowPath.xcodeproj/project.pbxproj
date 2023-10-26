@@ -118,6 +118,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02F972872AEAD2CC0002A52A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		02F972892AEAD2CE0002A52A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		02F9728E2AEAD2F80002A52A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		02F9728F2AEAD2FE0002A52A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		02F972942AEAD30E0002A52A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		02F972952AEAD3100002A52A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		02F9729A2AEAD3170002A52A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		02F9729B2AEAD3180002A52A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		3A739BBC207618D50069F21C /* libmaxminddb.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libmaxminddb.xcodeproj; path = ../libmaxminddb/xcode/libmaxminddb.xcodeproj; sourceTree = "<group>"; };
 		B82847461CEAE51B00820456 /* pcrs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pcrs.c; sourceTree = "<group>"; };
 		B82847471CEAE51B00820456 /* pcrs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pcrs.h; sourceTree = "<group>"; };
@@ -449,6 +457,10 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				es,
+				ar,
+				de,
 			);
 			mainGroup = B8DEFD711CE9C923003FC706;
 			productRefGroup = B8DEFD7C1CE9C923003FC706 /* Products */;
@@ -568,6 +580,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				B82847C01CEB14B000820456 /* Base */,
+				02F972892AEAD2CE0002A52A /* ru */,
+				02F9728F2AEAD2FE0002A52A /* es */,
+				02F972952AEAD3100002A52A /* ar */,
+				02F9729B2AEAD3180002A52A /* de */,
 			);
 			name = Main.storyboard;
 			path = .;
@@ -577,6 +593,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				B82847C51CEB14B000820456 /* Base */,
+				02F972872AEAD2CC0002A52A /* ru */,
+				02F9728E2AEAD2F80002A52A /* es */,
+				02F972942AEAD30E0002A52A /* ar */,
+				02F9729A2AEAD3170002A52A /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			path = .;

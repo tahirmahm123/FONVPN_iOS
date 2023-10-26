@@ -1,0 +1,796 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "%@" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%lld out of %lld Devices" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld out of %2$lld Devices"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$lld 台设备中的 %1$lld 台"
+          }
+        }
+      }
+    },
+    "%lld%%" : {
+
+    },
+    "1 or more numbers" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 个或多个数字"
+          }
+        }
+      }
+    },
+    "1 or more special character" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1个或多个特殊字符"
+          }
+        }
+      }
+    },
+    "1 upper case letter" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1个大写字母"
+          }
+        }
+      }
+    },
+    "2 Locations" : {
+
+    },
+    "24/7 Customer support" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24/7 客户支持"
+          }
+        }
+      }
+    },
+    "Account Details" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帐户详细资料"
+          }
+        }
+      }
+    },
+    "Account Settings" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帐号设定"
+          }
+        }
+      }
+    },
+    "Active Devices" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有源设备"
+          }
+        }
+      }
+    },
+    "All Locations" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所有地点"
+          }
+        }
+      }
+    },
+    "All Notifications" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所有通知"
+          }
+        }
+      }
+    },
+    "Already Have an Account?" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已经有帐户？"
+          }
+        }
+      }
+    },
+    "Anonymity and Identity Protection" : {
+
+    },
+    "App Settings" : {
+
+    },
+    "Are you sure you want to delete? This action is permanent and cannot be undone." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你确定你要删除？此操作是永久性的且无法撤消。"
+          }
+        }
+      }
+    },
+    "Are you sure you want to logout %@? " : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您确定要注销%@吗？"
+          }
+        }
+      }
+    },
+    "Are you sure you want to logout? Logging out will securely sign you out of your account and protect your privacy." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您确定要退出吗？注销将使您安全地退出帐户并保护您的隐私。"
+          }
+        }
+      }
+    },
+    "Auto Connect" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自动连接"
+          }
+        }
+      }
+    },
+    "Auto connect and security" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自动连接和安全"
+          }
+        }
+      }
+    },
+    "Auto Server Switch option in the background (in case of connectivity issue)" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "后台自动服务器切换选项（如果出现连接问题）"
+          }
+        }
+      }
+    },
+    "Auto Switch Location" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "磁性开关位置"
+          }
+        }
+      }
+    },
+    "Between 8 to 20 character" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "8 到 20 个字符之间"
+          }
+        }
+      }
+    },
+    "By creating account, I accept Terms of Use and Privacy Policy." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "创建帐户即表示我接受使用条款和隐私政策。"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        }
+      }
+    },
+    "Choose Your Plan" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择您的计划"
+          }
+        }
+      }
+    },
+    "CIDRAddressValidationError" : {
+      "comment" : "Error message for invalid address ip.\n   Error message for malformed CIDR address.\n   Error message invalid address subnet."
+    },
+    "Close" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭"
+          }
+        }
+      }
+    },
+    "Complete Purchase" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成购买"
+          }
+        }
+      }
+    },
+    "Confirm" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "确认"
+          }
+        }
+      }
+    },
+    "Connect" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "连接"
+          }
+        }
+      }
+    },
+    "Connecting..." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在连接..."
+          }
+        }
+      }
+    },
+    "Connection Settings" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "连接设置"
+          }
+        }
+      }
+    },
+    "Continue" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "继续"
+          }
+        }
+      }
+    },
+    "Continue with Account ID" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用帐户 ID 继续"
+          }
+        }
+      }
+    },
+    "Continue with Email" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "继续使用电子邮件"
+          }
+        }
+      }
+    },
+    "Create Account" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "创建账户"
+          }
+        }
+      }
+    },
+    "Create Your Account for Enhanced Security" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "创建您的帐户以增强安全性"
+          }
+        }
+      }
+    },
+    "Current Device" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前设备"
+          }
+        }
+      }
+    },
+    "Current IP Address" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前IP地址"
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除"
+          }
+        }
+      }
+    },
+    "Delete Account" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除帐户"
+          }
+        }
+      }
+    },
+    "Delete Confirmation" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除确认"
+          }
+        }
+      }
+    },
+    "Disconnect" : {
+
+    },
+    "Disconnecting..." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在断开连接..."
+          }
+        }
+      }
+    },
+    "Email/Account ID" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电子邮件/帐户 ID"
+          }
+        }
+      }
+    },
+    "Expies on %@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "于 %@ 到期"
+          }
+        }
+      }
+    },
+    "Fastest Locations" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最快的地点"
+          }
+        }
+      }
+    },
+    "Fastest Server" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最快的服务器"
+          }
+        }
+      }
+    },
+    "Forget Password?" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "忘记密码？"
+          }
+        }
+      }
+    },
+    "Germany" : {
+
+    },
+    "Global Server Network" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "Important Notice" : {
+
+    },
+    "Language" : {
+
+    },
+    "Let's Get Started" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "让我们开始吧"
+          }
+        }
+      }
+    },
+    "Loading.." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加载中.."
+          }
+        }
+      }
+    },
+    "Logout" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登出"
+          }
+        }
+      }
+    },
+    "Logout All" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部注销"
+          }
+        }
+      }
+    },
+    "Logout Device" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "注销设备"
+          }
+        }
+      }
+    },
+    "Logout User" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "注销用户"
+          }
+        }
+      }
+    },
+    "Most Popular" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Most Popular"
+          }
+        }
+      }
+    },
+    "Multiple Device Support" : {
+
+    },
+    "My Account" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的账户"
+          }
+        }
+      }
+    },
+    "No" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不"
+          }
+        }
+      }
+    },
+    "Notification" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notification"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知"
+          }
+        }
+      }
+    },
+    "Notify us of any problems you encounter in our app, and we'll promptly address and resolve them." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果您在我们的应用程序中遇到任何问题，请通知我们，我们将及时处理和解决。"
+          }
+        }
+      }
+    },
+    "OR" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "或者"
+          }
+        }
+      }
+    },
+    "Permanently remove your all information from our system." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从我们的系统中永久删除您的所有信息。"
+          }
+        }
+      }
+    },
+    "Privacy Policy" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        }
+      }
+    },
+    "Processing" : {
+
+    },
+    "Processing..." : {
+
+    },
+    "Random Server" : {
+
+    },
+    "Recent Locations" : {
+
+    },
+    "Report a issue" : {
+
+    },
+    "Reset VPN profile" : {
+
+    },
+    "Reset VPN Profile" : {
+
+    },
+    "Resolve connectivity problems." : {
+
+    },
+    "Restore Purchase" : {
+
+    },
+    "Save" : {
+
+    },
+    "Save your time by creating your won list of servers." : {
+
+    },
+    "Search" : {
+
+    },
+    "Secure Access Anywhere:" : {
+
+    },
+    "Settings" : {
+
+    },
+    "Sign in" : {
+
+    },
+    "Sign in Here" : {
+
+    },
+    "Sign in to %@" : {
+
+    },
+    "Sign in with %@" : {
+
+    },
+    "Subscription, devices, logout, etc." : {
+
+    },
+    "Support Center" : {
+
+    },
+    "Tap to" : {
+
+    },
+    "Tap to change Locaion" : {
+
+    },
+    "Tap to select Server" : {
+
+    },
+    "Terms of Service" : {
+
+    },
+    "Terms of services" : {
+
+    },
+    "Today 12:00 AM" : {
+
+    },
+    "Troubleshooting" : {
+
+    },
+    "Troubleshooting, reinstall vpn profile etc." : {
+
+    },
+    "Upgrade" : {
+
+    },
+    "v%@" : {
+
+    },
+    "Version" : {
+
+    },
+    "Yes" : {
+
+    },
+    "You are not secure!" : {
+
+    },
+    "You are secured now" : {
+
+    },
+    "You'll be asked to reinstall the VPN profile on your next connection." : {
+
+    },
+    "Your Favourite servers will be displayed here" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您最喜欢的服务器将显示在这里"
+          }
+        }
+      }
+    },
+    "Your Location:" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的地点："
+          }
+        }
+      }
+    },
+    "Your password must contain:" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您的密码必须包含："
+          }
+        }
+      }
+    },
+    "Your VPN subscription is expiring soon. Don't miss out on uninterrupted protection and privacy. Renew your subscription now to continue enjoying all the benefits of our VPN service. Stay secure and browse with confidence." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您的 VPN 订阅即将到期。不要错过不间断的保护和隐私。立即续订，继续享受我们 VPN 服务的所有优势。确保安全并放心浏览。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

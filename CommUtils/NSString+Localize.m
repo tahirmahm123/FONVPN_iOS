@@ -7,10 +7,10 @@
 
 #import "NSString+Localize.h"
 
-@implementation NSString (Localize)
+@implementation NSString (AppLocalize)
 
 - (NSString *) localized {
-    NSString *path = [[NSBundle mainBundle] pathForResource:[Localize currentLanguage] ofType:@"lproj"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:[AppLocalize currentLanguage] ofType:@"lproj"];
     NSBundle *bundle = [NSBundle bundleWithPath:path];
     if ([bundle isKindOfClass:[NSBundle class]]) {
         return [bundle localizedStringForKey:self value:nil table:nil];
@@ -48,7 +48,7 @@
 static NSString *const LCLCurrentLanguageKey = @"LCLCurrentLanguageKey";
 static NSString *const LCLDefaultLanguage = @"en";
 
-@implementation Localize
+@implementation AppLocalize
 
 + (NSArray<NSString *> *) availableLanguages {
     return [[NSBundle mainBundle] localizations];

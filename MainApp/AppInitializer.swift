@@ -30,9 +30,9 @@ class AppInitializer: NSObject, AppLifeCycleProtocol {
         DDLog.add(fileLogger)
 
         #if DEBUG
-            DDLog.add(DDTTYLogger.sharedInstance!) // TTY = Xcode console
+//            DDLog.add(DDTTYLogger.sharedInstance!) // TTY = Xcode console
             DDLog.add(DDOSLogger.sharedInstance) // ASL = Apple System Logs
-            DDLog.setLevel(DDLogLevel.all, for: DDTTYLogger.self)
+//            DDLog.setLevel(DDLogLevel.all, for: DDTTYLogger.self)
             DDLog.setLevel(DDLogLevel.all, for: DDOSLogger.self)
         #else
 
